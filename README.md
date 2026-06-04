@@ -5,11 +5,11 @@ SVG stream badge pack for Nuvio.
 Import URL:
 
 ```text
-https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14/badges.json
+https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/badges.json
 ```
 
 The pack is generated from `badges.config.json` and `generate-badges.mjs` so
-badge names, regex patterns, colors, and SVG assets stay consistent. The v14 URL
+badge names, regex patterns, colors, and SVG assets stay consistent. The v15 URL
 is intentionally versioned so Nuvio/Coil can fetch fresh badge images instead of
 reusing an older cached URL.
 
@@ -35,14 +35,14 @@ Commands:
 ```bash
 npm install
 node generate-badges.mjs
-npm run render -- . v14
+npm run render -- . v15
 ```
 
 The generated preview files are:
 
 ```text
-dist/v14/preview.html
-dist/v14/nuvio-tv-sim-4x.png
+dist/v15/preview.html
+dist/v15/nuvio-tv-sim-4x.png
 dist/preview.html
 ```
 
@@ -52,5 +52,5 @@ only shows raw imported images and does not match Nuvio's chip rendering closely
 If this repo is published under a different owner/name, regenerate with:
 
 ```bash
-BADGE_BASE_URL="https://raw.githubusercontent.com/<owner>/<repo>/refs/heads/main/dist/v14" node generate-badges.mjs
+BADGE_BASE_URL="https://raw.githubusercontent.com/<owner>/<repo>/refs/heads/main/dist/v15" node generate-badges.mjs
 ```

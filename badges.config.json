@@ -1,6 +1,6 @@
 {
-  "version": "v14",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14",
+  "version": "v15",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15",
   "theme": {
     "name": "colorful-filled",
     "fill": "#15181D",
@@ -56,7 +56,7 @@
       "name": "4K",
       "label": "4K",
       "pattern": "(?i)\\b(?:2160p?|4k|uhd)\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FEF08A", "text": "#171400", "accent": "#171400", "icon": "#171400", "mark": "none", "asset": "assets/badge-logos/white/white-4k.svg", "assetHeight": 14.2 }
+      "style": { "fill": "#059669", "stroke": "#6EE7B7", "text": "#ECFDF5", "accent": "#ECFDF5", "icon": "#ECFDF5", "mark": "none", "asset": "assets/badge-logos/white/white-4k.svg", "assetHeight": 14.2 }
     },
     {
       "groupId": "resolution",
@@ -64,7 +64,7 @@
       "name": "1080p",
       "label": "1080P",
       "pattern": "(?i)\\b1080p?\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FEF08A", "text": "#171400", "accent": "#171400", "icon": "#171400", "mark": "none", "asset": "assets/badge-logos/white/white-1080p.svg", "assetHeight": 13.8 }
+      "style": { "fill": "#059669", "stroke": "#6EE7B7", "text": "#ECFDF5", "accent": "#ECFDF5", "icon": "#ECFDF5", "mark": "none", "asset": "assets/badge-logos/white/white-1080p.svg", "assetHeight": 13.8 }
     },
     {
       "groupId": "resolution",
@@ -72,7 +72,7 @@
       "name": "720p",
       "label": "720P",
       "pattern": "(?i)\\b720p?\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FEF08A", "text": "#171400", "accent": "#171400", "icon": "#171400", "mark": "none", "asset": "assets/badge-logos/white/white-720p.svg", "assetHeight": 13.8 }
+      "style": { "fill": "#059669", "stroke": "#6EE7B7", "text": "#ECFDF5", "accent": "#ECFDF5", "icon": "#ECFDF5", "mark": "none", "asset": "assets/badge-logos/white/white-720p.svg", "assetHeight": 13.8 }
     },
     {
       "groupId": "visual",
@@ -80,7 +80,7 @@
       "name": "SeaDex",
       "label": "SEADEX",
       "pattern": "(?i)\\bseadex\\b",
-      "style": { "fill": "#10B981", "stroke": "#6EE7B7", "text": "#022C22", "accent": "#022C22", "icon": "#022C22", "mark": "none", "asset": "assets/badge-logos/white/white-SeaDex.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "none", "asset": "assets/badge-logos/white/white-SeaDex.svg" }
     },
     {
       "groupId": "visual",
@@ -88,7 +88,7 @@
       "name": "HDR10+",
       "label": "HDR10+",
       "pattern": "(?i)(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)",
-      "style": { "fill": "#F59E0B", "stroke": "#FCD34D", "text": "#1F1000", "accent": "#1F1000", "icon": "#1F1000", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10Plus.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10Plus.svg" }
     },
     {
       "groupId": "visual",
@@ -96,7 +96,7 @@
       "name": "HDR10",
       "label": "HDR10",
       "pattern": "(?i)^(?!.*(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)).*\\bhdr10\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FCD34D", "text": "#1F1000", "accent": "#1F1000", "icon": "#1F1000", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10.svg" }
     },
     {
       "groupId": "visual",
@@ -104,7 +104,7 @@
       "name": "HDR",
       "label": "HDR",
       "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FCD34D", "text": "#1F1000", "accent": "#1F1000", "icon": "#1F1000", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR.svg" }
     },
     {
       "groupId": "visual",
@@ -112,7 +112,7 @@
       "name": "IMAX Enhanced",
       "label": "IMAX E",
       "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
-      "style": { "fill": "#1D4ED8", "stroke": "#93C5FD", "text": "#EFF6FF", "accent": "#EFF6FF", "icon": "#EFF6FF", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX-enhanced.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX-enhanced.svg" }
     },
     {
       "groupId": "visual",
@@ -120,7 +120,7 @@
       "name": "IMAX",
       "label": "IMAX",
       "pattern": "(?i)^(?!.*\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b).*\\bimax\\b",
-      "style": { "fill": "#1D4ED8", "stroke": "#93C5FD", "text": "#EFF6FF", "accent": "#EFF6FF", "icon": "#EFF6FF", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX.svg" }
     },
     {
       "groupId": "visual",
@@ -128,7 +128,7 @@
       "name": "DV",
       "label": "DV",
       "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FCD34D", "text": "#1F1000", "accent": "#1F1000", "icon": "#1F1000", "mark": "dolby", "asset": "assets/badge-logos/white/white-DV.svg" }
+      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "dolby", "asset": "assets/badge-logos/white/white-DV.svg" }
     },
     {
       "groupId": "audio",
@@ -200,7 +200,7 @@
       "name": "7.1",
       "label": "7.1",
       "pattern": "(?i)\\b7[. ]1\\b",
-      "style": { "fill": "#0284C7", "stroke": "#7DD3FC", "text": "#F0F9FF", "accent": "#F0F9FF", "icon": "#F0F9FF", "mark": "speaker", "asset": "assets/badge-logos/white/white-71.svg" }
+      "style": { "fill": "#475569", "stroke": "#CBD5E1", "text": "#F8FAFC", "accent": "#F8FAFC", "icon": "#F8FAFC", "mark": "speaker", "asset": "assets/badge-logos/white/white-71.svg" }
     },
     {
       "groupId": "channels",
@@ -208,7 +208,7 @@
       "name": "5.1",
       "label": "5.1",
       "pattern": "(?i)\\b5[. ]1\\b",
-      "style": { "fill": "#0284C7", "stroke": "#7DD3FC", "text": "#F0F9FF", "accent": "#F0F9FF", "icon": "#F0F9FF", "mark": "speaker", "asset": "assets/badge-logos/white/white-51.svg" }
+      "style": { "fill": "#475569", "stroke": "#CBD5E1", "text": "#F8FAFC", "accent": "#F8FAFC", "icon": "#F8FAFC", "mark": "speaker", "asset": "assets/badge-logos/white/white-51.svg" }
     },
     {
       "groupId": "streaming",
