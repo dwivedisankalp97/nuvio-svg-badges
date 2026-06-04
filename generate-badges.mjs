@@ -30,6 +30,7 @@ function ensureDirs() {
 }
 
 function widthFor(label, mark) {
+  if (!label && mark === 'dts') return 34;
   if (!label && mark !== 'none') return 26;
 
   if (textRenderer) {
@@ -42,6 +43,9 @@ function widthFor(label, mark) {
     const textWidth = Math.ceil(metrics.width + 1);
     if (mark === 'none') {
       return Math.max(28, Math.min(84, textWidth + 8));
+    }
+    if (mark === 'dts') {
+      return Math.max(42, Math.min(88, textWidth + 28));
     }
     return Math.max(37, Math.min(84, textWidth + 19));
   }
@@ -65,13 +69,13 @@ function layoutFor(label, mark) {
   const textWidth = Math.ceil(metrics.width + 1);
   return {
     width,
-    textX: 15.2 + textWidth / 2,
+    textX: (mark === 'dts' ? 21 : 15.2) + textWidth / 2,
   };
 }
 
 function fontSizeFor(label) {
   const pathFont = config.font?.renderer === 'path';
-  const boost = pathFont ? 0.75 : 0;
+  const boost = pathFont ? 0.2 : 0;
   if (label.length >= 10) return 9.1 + boost;
   if (label.length >= 9) return 9.5 + boost;
   if (label.length >= 8) return 10 + boost;
@@ -106,7 +110,7 @@ function styleFor(badge) {
   };
 }
 
-function markSvg(mark, style) {
+function markSvg(mark, style, options = {}) {
   const fill = style.icon || style.text;
   const cutout = style.fill;
   switch (mark) {
@@ -121,9 +125,9 @@ function markSvg(mark, style) {
     case 'frame':
       return `<path d="M3.8 4.7h9.4v6.6H3.8z" fill="none" stroke="${fill}" stroke-width="1.5"/><path d="M5.8 6.9h5.4v2.2H5.8z" fill="${fill}" opacity=".65"/>`;
     case 'dolby':
-      return `<g transform="translate(2.2 3.4) scale(.45)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V20H24V4H0ZM10 12C10 9.79086 8.20914 8 6 8H4V16H6C8.20914 16 10 14.2091 10 12ZM18 16H20V8H18C15.7909 8 14 9.79086 14 12C14 14.2091 15.7909 16 18 16Z" fill="${fill}"/></g>`;
+      return `<g transform="translate(2.2 1.45) scale(.5)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V20H24V4H0ZM10 12C10 9.79086 8.20914 8 6 8H4V16H6C8.20914 16 10 14.2091 10 12ZM18 16H20V8H18C15.7909 8 14 9.79086 14 12C14 14.2091 15.7909 16 18 16Z" fill="${fill}"/></g>`;
     case 'dts':
-      return `<g transform="translate(2.1 3.5) scale(.5)"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.303 6.657v4.046c-.458-.144-.961-.224-1.49-.224C1.708 10.479 0 11.61 0 13.31c0 1.913 1.708 2.832 3.814 2.832.528 0 1.031-.08 1.488-.224v.204h4.299v-4.528h1.278v3.368s.209 1.144 2.89 1.144c0 0 1.141-.044 2.352-.301.081-.017.345-.112.727-.083.396.029.91.183.975.196.392.065.778.143 1.872.188.897.037 1.791-.093 2.019-.131 1.071-.18 2.697-1.038 2.191-2.223-.201-.47-.836-.919-1.153-1.161-.139-.106-1.257-.913-.325-1.24 0 0 .236-.061.496-.061.15 0 .638.01.638.01l.114-.507s-1.12-.392-3.041-.392c-.817 0-3.711.3-3.711 1.651 0 1.028 1.785 2.025 1.872 2.105.114.106.331.331.299.511 0 .213-.341.752-1.402.507-.813-.188-1.101-.2-1.717-.082 0 0-.645.087-.768-.147v-3.351h1.146v-1.111h-1.163V7.442l-4.298 1.831v1.21H9.617V6.657H5.303zM5.44 14.952c-.704-.145-1.239-.842-1.239-1.634 0-.792.535-1.489 1.239-1.634v3.268z" fill="${fill}"/></g>`;
+      return `<g transform="${options.iconOnly ? 'translate(7.6 .75) scale(.76)' : 'translate(2.2 .65) scale(.7)'}"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.303 6.657v4.046c-.458-.144-.961-.224-1.49-.224C1.708 10.479 0 11.61 0 13.31c0 1.913 1.708 2.832 3.814 2.832.528 0 1.031-.08 1.488-.224v.204h4.299v-4.528h1.278v3.368s.209 1.144 2.89 1.144c0 0 1.141-.044 2.352-.301.081-.017.345-.112.727-.083.396.029.91.183.975.196.392.065.778.143 1.872.188.897.037 1.791-.093 2.019-.131 1.071-.18 2.697-1.038 2.191-2.223-.201-.47-.836-.919-1.153-1.161-.139-.106-1.257-.913-.325-1.24 0 0 .236-.061.496-.061.15 0 .638.01.638.01l.114-.507s-1.12-.392-3.041-.392c-.817 0-3.711.3-3.711 1.651 0 1.028 1.785 2.025 1.872 2.105.114.106.331.331.299.511 0 .213-.341.752-1.402.507-.813-.188-1.101-.2-1.717-.082 0 0-.645.087-.768-.147v-3.351h1.146v-1.111h-1.163V7.442l-4.298 1.831v1.21H9.617V6.657H5.303zM5.44 14.952c-.704-.145-1.239-.842-1.239-1.634 0-.792.535-1.489 1.239-1.634v3.268z" fill="${fill}"/></g>`;
     case 'speaker':
       return `<path d="M3.5 9.8h2.4l3.2 2.8V3.4L5.9 6.2H3.5z" fill="${fill}"/><path d="M10.6 5.3c1.2 1.4 1.2 4 0 5.4M12.4 3.9c2 2.4 2 5.8 0 8.2" fill="none" stroke="${fill}" stroke-width="1.25" stroke-linecap="round"/>`;
     default:
@@ -215,7 +219,7 @@ function svgFor(badge) {
     : labelTexts(badge.label, textX, fontSize, style, darkText);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
-  ${hasMark ? `<g>${markSvg(mark, style)}</g>` : ''}
+  ${hasMark ? `<g>${markSvg(mark, style, { iconOnly: !badge.label })}</g>` : ''}
   ${labelSvg}
 </svg>
 `;
