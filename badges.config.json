@@ -1,6 +1,6 @@
 {
-  "version": "v2",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v2",
+  "version": "v3",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v3",
   "groups": [
     { "id": "quality", "name": "Quality", "color": "#38BDF8" },
     { "id": "resolution", "name": "Resolution", "color": "#FDE047" },

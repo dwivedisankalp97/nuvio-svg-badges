@@ -12,7 +12,7 @@ const BASE_URL =
   `https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/${VERSION}`;
 const OUT_DIR = path.join(OUT_ROOT, VERSION);
 const SVG_DIR = path.join(OUT_DIR, 'svg');
-const BADGE_HEIGHT = 20;
+const BADGE_HEIGHT = 16;
 
 function esc(value) {
   return String(value)
@@ -27,16 +27,15 @@ function ensureDirs() {
 }
 
 function widthFor(label, mark) {
-  const markWidth = mark === 'none' ? 0 : 14;
-  return Math.max(42, Math.min(92, Math.round(label.length * 7.3 + 15 + markWidth)));
+  return Math.max(34, Math.min(92, Math.round(label.length * 7.25 + 10)));
 }
 
 function fontSizeFor(label) {
-  if (label.length >= 10) return 9.3;
-  if (label.length >= 9) return 9.8;
-  if (label.length >= 8) return 10.2;
-  if (label.length <= 3) return 12.2;
-  return 11.1;
+  if (label.length >= 10) return 9.2;
+  if (label.length >= 9) return 9.7;
+  if (label.length >= 8) return 10.1;
+  if (label.length <= 3) return 11.8;
+  return 10.8;
 }
 
 function markSvg(mark, style) {
@@ -62,26 +61,15 @@ function markSvg(mark, style) {
 
 function svgFor(badge) {
   const style = badge.style;
-  const mark = style.mark || 'none';
+  const mark = 'none';
   const width = widthFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
-  const hasMark = mark !== 'none';
-  const textX = hasMark ? (width + 15) / 2 : width / 2;
+  const textX = width / 2;
   const label = esc(badge.label);
-  const id = esc(badge.id);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
-  <defs>
-    <linearGradient id="g-${id}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${style.fill}"/>
-      <stop offset="1" stop-color="${style.fill}" stop-opacity=".86"/>
-    </linearGradient>
-  </defs>
-  <rect x="1" y="1" width="${width - 2}" height="18" rx="5" fill="url(#g-${id})" stroke="${style.stroke}" stroke-width="1.35"/>
-  <path d="M5 3h${width - 10}" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
-  ${hasMark ? `<g>${markSvg(mark, style)}</g>` : ''}
-  <text x="${textX}" y="13.8" fill="${style.text}" text-anchor="middle"
-    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="${fontSize}" font-weight="900" letter-spacing=".2">${label}</text>
+  <text x="${textX}" y="11.8" fill="${style.text}" text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="900">${label}</text>
 </svg>
 `;
 }
@@ -106,10 +94,10 @@ function build() {
       pattern: badge.pattern,
       imageURL: `${BASE_URL}/svg/${filename}`,
       isEnabled: true,
-      tagColor: '',
-      tagStyle: '',
+      tagColor: badge.style.fill,
+      tagStyle: 'filled',
       textColor: badge.style.text,
-      borderColor: '',
+      borderColor: badge.style.stroke,
       type: 'filter',
     };
   });
