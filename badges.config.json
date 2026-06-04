@@ -1,12 +1,13 @@
 {
-  "version": "v8",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v8",
+  "version": "v9",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v9",
   "theme": {
     "name": "monochrome-outline",
-    "fill": "#171717",
-    "stroke": "#F4F4F5",
+    "fill": "#00000000",
+    "stroke": "#FFFFFF",
     "text": "#FFFFFF",
-    "accent": "#FFFFFF"
+    "accent": "#FFFFFF",
+    "tagStyle": "bordered"
   },
   "font": {
     "renderer": "path",
@@ -130,33 +131,33 @@
       "groupId": "audio",
       "id": "dtsx",
       "name": "DTS:X",
-      "label": "DTS:X",
+      "label": "X",
       "pattern": "(?i)\\b(?:dts[:. -]?x)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
       "groupId": "audio",
       "id": "dts-hd-ma",
       "name": "DTS-HD MA",
-      "label": "DTS-HD MA",
+      "label": "HD MA",
       "pattern": "(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
       "groupId": "audio",
       "id": "dts-hd",
       "name": "DTS-HD",
-      "label": "DTS-HD",
+      "label": "HD",
       "pattern": "(?i)\\bdts[- .]?hd\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
       "groupId": "audio",
       "id": "dts",
       "name": "DTS",
-      "label": "DTS",
+      "label": "",
       "pattern": "(?i)\\bdts\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
       "groupId": "audio",
@@ -164,7 +165,7 @@
       "name": "Atmos+DV",
       "label": "ATMOS+DV",
       "pattern": "(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
       "groupId": "audio",
@@ -180,7 +181,7 @@
       "name": "TrueHD+DV",
       "label": "TRUEHD+DV",
       "pattern": "(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
       "groupId": "audio",
@@ -188,7 +189,7 @@
       "name": "TrueHD",
       "label": "TRUEHD",
       "pattern": "(?i)\\btrue[- .]?hd\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
       "groupId": "audio",
@@ -204,7 +205,7 @@
       "name": "DD+DV",
       "label": "DD+DV",
       "pattern": "(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
       "groupId": "audio",
