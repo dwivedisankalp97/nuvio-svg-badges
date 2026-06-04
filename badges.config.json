@@ -36,7 +36,7 @@
       "id": "bluray",
       "name": "BluRay",
       "label": "BLURAY",
-      "pattern": "(?i)\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
+      "pattern": "(?i)^(?!.*\\b(?:remux|blu[- .]?ray remux)\\b).*\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
       "style": { "fill": "#0B2A55", "stroke": "#60A5FA", "text": "#DBEAFE", "accent": "#93C5FD", "mark": "disc" }
     },
     {
@@ -84,7 +84,7 @@
       "id": "hdr10plus",
       "name": "HDR10+",
       "label": "HDR10+",
-      "pattern": "(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b",
+      "pattern": "(?i)(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)",
       "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
     },
     {
@@ -92,7 +92,7 @@
       "id": "hdr10",
       "name": "HDR10",
       "label": "HDR10",
-      "pattern": "(?i)\\bhdr10\\b",
+      "pattern": "(?i)^(?!.*(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)).*\\bhdr10\\b",
       "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
     },
     {
@@ -116,7 +116,7 @@
       "id": "imax",
       "name": "IMAX",
       "label": "IMAX",
-      "pattern": "(?i)\\bimax\\b",
+      "pattern": "(?i)^(?!.*\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b).*\\bimax\\b",
       "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "frame" }
     },
     {
@@ -124,7 +124,7 @@
       "id": "dv",
       "name": "DV",
       "label": "DV",
-      "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
+      "pattern": "(?i)^(?!.*(?:\\b(?:atmos|dolby atmos|true[- .]?hd|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b|\\bdd\\+(?=$|\\W))).*\\b(?:dv|dovi|dolby vision)\\b",
       "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#111827", "mark": "dolby" }
     },
     {
@@ -148,7 +148,7 @@
       "id": "dts-hd",
       "name": "DTS-HD",
       "label": "HD",
-      "pattern": "(?i)\\bdts[- .]?hd\\b",
+      "pattern": "(?i)^(?!.*\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b).*\\bdts[- .]?hd\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
@@ -156,7 +156,7 @@
       "id": "dts",
       "name": "DTS",
       "label": "",
-      "pattern": "(?i)\\bdts\\b",
+      "pattern": "(?i)^(?!.*\\b(?:dts[:. -]?x|dts[- .]?hd)\\b).*\\bdts\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
     },
     {
@@ -172,7 +172,7 @@
       "id": "atmos",
       "name": "Atmos",
       "label": "ATMOS",
-      "pattern": "(?i)\\b(?:atmos|dolby atmos)\\b",
+      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*\\b(?:atmos|dolby atmos)\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
@@ -180,7 +180,7 @@
       "id": "truehd-dv",
       "name": "TrueHD+DV",
       "label": "TRUEHD+DV",
-      "pattern": "(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
+      "pattern": "(?i)^(?!.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
@@ -188,7 +188,7 @@
       "id": "truehd",
       "name": "TrueHD",
       "label": "TRUEHD",
-      "pattern": "(?i)\\btrue[- .]?hd\\b",
+      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*\\btrue[- .]?hd\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
@@ -196,7 +196,7 @@
       "id": "ddplus",
       "name": "DD+",
       "label": "DD+",
-      "pattern": "(?i)\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b",
+      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b)",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
@@ -204,7 +204,7 @@
       "id": "ddplus-dv",
       "name": "DD+DV",
       "label": "DD+DV",
-      "pattern": "(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
+      "pattern": "(?i)^(?!.*\\b(?:atmos|dolby atmos)\\b)(?=.*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b))(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
@@ -212,7 +212,7 @@
       "id": "dd",
       "name": "DD",
       "label": "DD",
-      "pattern": "(?i)\\b(?:dd|ac[- .]?3|dolby digital)\\b",
+      "pattern": "(?i)^(?!.*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b)).*\\b(?:dd|ac[- .]?3|dolby digital)\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
     },
     {
