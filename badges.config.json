@@ -1,6 +1,11 @@
 {
-  "version": "v5",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v5",
+  "version": "v6",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v6",
+  "font": {
+    "renderer": "path",
+    "path": "assets/fonts/RobotoCondensed.ttf",
+    "name": "Roboto Condensed"
+  },
   "groups": [
     { "id": "quality", "name": "Quality", "color": "#38BDF8" },
     { "id": "resolution", "name": "Resolution", "color": "#FDE047" },

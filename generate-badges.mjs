@@ -1,8 +1,10 @@
 import fs from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 const CONFIG_PATH = path.resolve('badges.config.json');
 const OUT_ROOT = path.resolve('dist');
+const require = createRequire(import.meta.url);
 
 const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
 const VERSION = process.env.BADGE_VERSION || config.version || 'v2';
@@ -13,6 +15,7 @@ const BASE_URL =
 const OUT_DIR = path.join(OUT_ROOT, VERSION);
 const SVG_DIR = path.join(OUT_DIR, 'svg');
 const BADGE_HEIGHT = 16;
+const textRenderer = loadTextRenderer();
 
 function esc(value) {
   return String(value)
@@ -32,11 +35,13 @@ function widthFor(label, mark) {
 }
 
 function fontSizeFor(label) {
-  if (label.length >= 10) return 9.1;
-  if (label.length >= 9) return 9.5;
-  if (label.length >= 8) return 10;
-  if (label.length <= 3) return 11.6;
-  return 10.7;
+  const pathFont = config.font?.renderer === 'path';
+  const boost = pathFont ? 0.75 : 0;
+  if (label.length >= 10) return 9.1 + boost;
+  if (label.length >= 9) return 9.5 + boost;
+  if (label.length >= 8) return 10 + boost;
+  if (label.length <= 3) return 11.6 + boost;
+  return 10.7 + boost;
 }
 
 function hexToRgb(hex) {
@@ -79,6 +84,76 @@ function markSvg(mark, style) {
   }
 }
 
+function loadTextRenderer() {
+  if (config.font?.renderer !== 'path') return null;
+
+  let TextToSVG;
+  try {
+    TextToSVG = require('text-to-svg');
+  } catch {
+    try {
+      TextToSVG = require('/tmp/nuvio-render/node_modules/text-to-svg');
+    } catch {
+      return null;
+    }
+  }
+
+  const fontPath = path.resolve(config.font.path || '');
+  if (!fs.existsSync(fontPath)) return null;
+  return TextToSVG.loadSync(fontPath);
+}
+
+function labelPath(label, x, y, fontSize, attributes) {
+  if (!textRenderer) return null;
+  return textRenderer.getPath(label, {
+    x,
+    y,
+    fontSize,
+    anchor: 'center baseline',
+    kerning: true,
+    attributes,
+  });
+}
+
+function labelPaths(label, x, y, fontSize, style, darkText) {
+  const shadowColor = darkText ? '#FFFFFF' : '#000000';
+  const shadowOpacity = darkText ? '.16' : '.22';
+  const shadowY = darkText ? y - 0.28 : y + 0.28;
+  const strokeWidth = label.length >= 9 ? '.24' : '.3';
+
+  return [
+    labelPath(label, x, shadowY, fontSize, {
+      fill: shadowColor,
+      opacity: shadowOpacity,
+    }),
+    labelPath(label, x, y, fontSize, {
+      fill: style.text,
+      stroke: style.text,
+      'stroke-width': strokeWidth,
+      'stroke-linejoin': 'round',
+      'paint-order': 'stroke fill',
+    }),
+  ].join('\n  ');
+}
+
+function labelTexts(label, x, fontSize, style, darkText) {
+  const shadowColor = darkText ? '#FFFFFF' : '#000000';
+  const shadowOpacity = darkText ? '.24' : '.36';
+  const shadowY = darkText ? '11.35' : '12.35';
+  const highlightColor = darkText ? '#000000' : '#FFFFFF';
+  const highlightOpacity = darkText ? '.12' : '.16';
+  const highlightY = darkText ? '12.3' : '11.25';
+  const fontWeight = label.length >= 9 ? 760 : 820;
+  const textStyle = `font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="${fontWeight}" letter-spacing="0"`;
+
+  return `<text x="${x}" y="${shadowY}" fill="${shadowColor}" opacity="${shadowOpacity}" text-anchor="middle"
+    ${textStyle}>${esc(label)}</text>
+  <text x="${x}" y="${highlightY}" fill="${highlightColor}" opacity="${highlightOpacity}" text-anchor="middle"
+    ${textStyle}>${esc(label)}</text>
+  <text x="${x}" y="11.8" fill="${style.text}" text-anchor="middle"
+    ${textStyle}>${esc(label)}</text>`;
+}
+
 function svgFor(badge) {
   const style = badge.style;
   const mark = style.mark || 'none';
@@ -86,26 +161,14 @@ function svgFor(badge) {
   const fontSize = fontSizeFor(badge.label);
   const hasMark = mark !== 'none';
   const textX = hasMark ? (width + 14) / 2 : width / 2;
-  const label = esc(badge.label);
   const darkText = luminance(style.text) < 0.45;
-  const shadowColor = darkText ? '#FFFFFF' : '#000000';
-  const shadowOpacity = darkText ? '.24' : '.36';
-  const shadowY = darkText ? '11.35' : '12.35';
-  const highlightColor = darkText ? '#000000' : '#FFFFFF';
-  const highlightOpacity = darkText ? '.12' : '.16';
-  const highlightY = darkText ? '12.3' : '11.25';
-  const letterSpacing = '0';
-  const fontWeight = badge.label.length >= 9 ? 760 : 820;
-  const textStyle = `font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="${fontWeight}" letter-spacing="${letterSpacing}"`;
+  const labelSvg = textRenderer
+    ? labelPaths(badge.label, textX, 11.7, fontSize, style, darkText)
+    : labelTexts(badge.label, textX, fontSize, style, darkText);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
   ${hasMark ? `<g>${markSvg(mark, style)}</g>` : ''}
-  <text x="${textX}" y="${shadowY}" fill="${shadowColor}" opacity="${shadowOpacity}" text-anchor="middle"
-    ${textStyle}>${label}</text>
-  <text x="${textX}" y="${highlightY}" fill="${highlightColor}" opacity="${highlightOpacity}" text-anchor="middle"
-    ${textStyle}>${label}</text>
-  <text x="${textX}" y="11.8" fill="${style.text}" text-anchor="middle"
-    ${textStyle}>${label}</text>
+  ${labelSvg}
 </svg>
 `;
 }
