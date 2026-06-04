@@ -5,46 +5,64 @@
   body { margin: 0; background: #09090b; color: #f4f4f5; font-family: Inter, system-ui, sans-serif; padding: 32px; }
   h1 { font-size: 24px; margin: 0 0 8px; }
   p { color: #a1a1aa; margin: 0 0 24px; }
-  .grid { display: flex; flex-wrap: wrap; gap: 10px; max-width: 920px; }
-  img { height: 24px; }
+  h2 { font-size: 16px; margin: 24px 0 10px; color: #e5e7eb; }
+  .grid { display: flex; flex-wrap: wrap; gap: 8px; max-width: 920px; }
+  .chip { height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); padding: 2px 3px; box-sizing: border-box; }
+  .chip img { height: 16px; display: block; }
 </style>
 <h1>Aiosan Nuvio Badges</h1>
 <p>Import URL: <code>https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/badges.json</code></p>
+<h2>Quality</h2>
 <div class="grid">
-  <img src="svg/remux.svg" alt="Remux">
-  <img src="svg/bluray.svg" alt="BluRay">
-  <img src="svg/webdl.svg" alt="WebDL">
-  <img src="svg/4k.svg" alt="4K">
-  <img src="svg/1080p.svg" alt="1080p">
-  <img src="svg/720p.svg" alt="720p">
-  <img src="svg/seadex.svg" alt="SeaDex">
-  <img src="svg/hdr10plus.svg" alt="HDR10+">
-  <img src="svg/hdr10.svg" alt="HDR10">
-  <img src="svg/hdr.svg" alt="HDR">
-  <img src="svg/imax-enhanced.svg" alt="IMAX Enhanced">
-  <img src="svg/imax.svg" alt="IMAX">
-  <img src="svg/dv.svg" alt="DV">
-  <img src="svg/dtsx.svg" alt="DTS:X">
-  <img src="svg/dts-hd-ma.svg" alt="DTS-HD MA">
-  <img src="svg/dts-hd.svg" alt="DTS-HD">
-  <img src="svg/dts.svg" alt="DTS">
-  <img src="svg/atmos-dv.svg" alt="Atmos+DV">
-  <img src="svg/atmos.svg" alt="Atmos">
-  <img src="svg/truehd-dv.svg" alt="TrueHD+DV">
-  <img src="svg/truehd.svg" alt="TrueHD">
-  <img src="svg/ddplus.svg" alt="DD+">
-  <img src="svg/ddplus-dv.svg" alt="DD+DV">
-  <img src="svg/dd.svg" alt="DD">
-  <img src="svg/7-1.svg" alt="7.1">
-  <img src="svg/5-1.svg" alt="5.1">
-  <img src="svg/netflix.svg" alt="NETFLIX">
-  <img src="svg/prime-video.svg" alt="PRIME VIDEO">
-  <img src="svg/apple-tv.svg" alt="APPLE TV+">
-  <img src="svg/disney-plus.svg" alt="DISNEY+">
-  <img src="svg/max.svg" alt="MAX">
-  <img src="svg/hulu.svg" alt="HULU">
-  <img src="svg/peacock.svg" alt="PEACOCK">
-  <img src="svg/paramount-plus.svg" alt="PARAMOUNT+">
-  <img src="svg/crave.svg" alt="CRAVE">
-  <img src="svg/crunchyroll.svg" alt="CRUNCHY ROLL">
+  <span class="chip" style="--bg:#22C55E;--border:#16A34A"><img src="svg/remux.svg" alt="Remux"></span>
+  <span class="chip" style="--bg:#22C55E;--border:#16A34A"><img src="svg/bluray.svg" alt="BluRay"></span>
+  <span class="chip" style="--bg:#22C55E;--border:#16A34A"><img src="svg/webdl.svg" alt="WebDL"></span>
+</div>
+<h2>Resolution</h2>
+<div class="grid">
+  <span class="chip" style="--bg:#FDE047;--border:#EAB308"><img src="svg/4k.svg" alt="4K"></span>
+  <span class="chip" style="--bg:#FDE047;--border:#EAB308"><img src="svg/1080p.svg" alt="1080p"></span>
+  <span class="chip" style="--bg:#FDE047;--border:#EAB308"><img src="svg/720p.svg" alt="720p"></span>
+</div>
+<h2>Visual</h2>
+<div class="grid">
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/seadex.svg" alt="SeaDex"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/hdr10plus.svg" alt="HDR10+"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/hdr10.svg" alt="HDR10"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/hdr.svg" alt="HDR"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/imax-enhanced.svg" alt="IMAX Enhanced"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/imax.svg" alt="IMAX"></span>
+  <span class="chip" style="--bg:#FACC15;--border:#CA8A04"><img src="svg/dv.svg" alt="DV"></span>
+</div>
+<h2>Audio</h2>
+<div class="grid">
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/dtsx.svg" alt="DTS:X"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/dts-hd-ma.svg" alt="DTS-HD MA"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/dts-hd.svg" alt="DTS-HD"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/dts.svg" alt="DTS"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/atmos-dv.svg" alt="Atmos+DV"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/atmos.svg" alt="Atmos"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/truehd-dv.svg" alt="TrueHD+DV"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/truehd.svg" alt="TrueHD"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/ddplus.svg" alt="DD+"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/ddplus-dv.svg" alt="DD+DV"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/dd.svg" alt="DD"></span>
+</div>
+<h2>Channels</h2>
+<div class="grid">
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/7-1.svg" alt="7.1"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/5-1.svg" alt="5.1"></span>
+</div>
+<h2>Streaming</h2>
+<div class="grid">
+  <span class="chip" style="--bg:#E50914;--border:#B91C1C"><img src="svg/netflix.svg" alt="NETFLIX"></span>
+  <span class="chip" style="--bg:#00A8E1;--border:#0284C7"><img src="svg/prime-video.svg" alt="PRIME VIDEO"></span>
+  <span class="chip" style="--bg:#F8FAFC;--border:#CBD5E1"><img src="svg/apple-tv.svg" alt="APPLE TV+"></span>
+  <span class="chip" style="--bg:#38BDF8;--border:#0284C7"><img src="svg/disney-plus.svg" alt="DISNEY+"></span>
+  <span class="chip" style="--bg:#7C3AED;--border:#5B21B6"><img src="svg/max.svg" alt="MAX"></span>
+  <span class="chip" style="--bg:#1CE783;--border:#16A34A"><img src="svg/hulu.svg" alt="HULU"></span>
+  <span class="chip" style="--bg:#FDBA74;--border:#EA580C"><img src="svg/peacock.svg" alt="PEACOCK"></span>
+  <span class="chip" style="--bg:#60A5FA;--border:#2563EB"><img src="svg/paramount-plus.svg" alt="PARAMOUNT+"></span>
+  <span class="chip" style="--bg:#22D3EE;--border:#0891B2"><img src="svg/crave.svg" alt="CRAVE"></span>
+  <span class="chip" style="--bg:#F97316;--border:#C2410C"><img src="svg/crunchyroll.svg" alt="CRUNCHY ROLL"></span>
 </div>

@@ -7,10 +7,10 @@
       "pattern": "(?i)\\b(?:remux|blu[- .]?ray remux)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/remux.svg",
       "isEnabled": true,
-      "tagColor": "#0F172A",
+      "tagColor": "#22C55E",
       "tagStyle": "filled",
-      "textColor": "#DBEAFE",
-      "borderColor": "#60A5FA",
+      "textColor": "#03140A",
+      "borderColor": "#16A34A",
       "type": "filter"
     },
     {
@@ -20,10 +20,10 @@
       "pattern": "(?i)\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/bluray.svg",
       "isEnabled": true,
-      "tagColor": "#0F172A",
+      "tagColor": "#22C55E",
       "tagStyle": "filled",
-      "textColor": "#DBEAFE",
-      "borderColor": "#60A5FA",
+      "textColor": "#03140A",
+      "borderColor": "#16A34A",
       "type": "filter"
     },
     {
@@ -33,10 +33,10 @@
       "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/webdl.svg",
       "isEnabled": true,
-      "tagColor": "#0F172A",
+      "tagColor": "#22C55E",
       "tagStyle": "filled",
-      "textColor": "#DBEAFE",
-      "borderColor": "#60A5FA",
+      "textColor": "#03140A",
+      "borderColor": "#16A34A",
       "type": "filter"
     },
     {
@@ -46,10 +46,10 @@
       "pattern": "(?i)\\b(?:2160p?|4k|uhd)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/4k.svg",
       "isEnabled": true,
-      "tagColor": "#052E1A",
+      "tagColor": "#FDE047",
       "tagStyle": "filled",
-      "textColor": "#DCFCE7",
-      "borderColor": "#22C55E",
+      "textColor": "#1F1A00",
+      "borderColor": "#EAB308",
       "type": "filter"
     },
     {
@@ -59,10 +59,10 @@
       "pattern": "(?i)\\b1080p?\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/1080p.svg",
       "isEnabled": true,
-      "tagColor": "#052E1A",
+      "tagColor": "#FDE047",
       "tagStyle": "filled",
-      "textColor": "#DCFCE7",
-      "borderColor": "#22C55E",
+      "textColor": "#1F1A00",
+      "borderColor": "#EAB308",
       "type": "filter"
     },
     {
@@ -72,10 +72,10 @@
       "pattern": "(?i)\\b720p?\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/720p.svg",
       "isEnabled": true,
-      "tagColor": "#052E1A",
+      "tagColor": "#FDE047",
       "tagStyle": "filled",
-      "textColor": "#DCFCE7",
-      "borderColor": "#22C55E",
+      "textColor": "#1F1A00",
+      "borderColor": "#EAB308",
       "type": "filter"
     },
     {
@@ -85,10 +85,10 @@
       "pattern": "(?i)\\bseadex\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/seadex.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -98,10 +98,10 @@
       "pattern": "(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/hdr10plus.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -111,10 +111,10 @@
       "pattern": "(?i)\\bhdr10\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/hdr10.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -124,10 +124,10 @@
       "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/hdr.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -137,10 +137,10 @@
       "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/imax-enhanced.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -150,10 +150,10 @@
       "pattern": "(?i)\\bimax\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/imax.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -163,10 +163,10 @@
       "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dv.svg",
       "isEnabled": true,
-      "tagColor": "#3B2504",
+      "tagColor": "#FACC15",
       "tagStyle": "filled",
-      "textColor": "#FEF3C7",
-      "borderColor": "#F59E0B",
+      "textColor": "#1F1800",
+      "borderColor": "#CA8A04",
       "type": "filter"
     },
     {
@@ -176,10 +176,10 @@
       "pattern": "(?i)\\b(?:dts[:. -]?x)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dtsx.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -189,10 +189,10 @@
       "pattern": "(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dts-hd-ma.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -202,10 +202,10 @@
       "pattern": "(?i)\\bdts[- .]?hd\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dts-hd.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -215,10 +215,10 @@
       "pattern": "(?i)\\bdts\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dts.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -228,10 +228,10 @@
       "pattern": "(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/atmos-dv.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -241,10 +241,10 @@
       "pattern": "(?i)\\b(?:atmos|dolby atmos)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/atmos.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -254,10 +254,10 @@
       "pattern": "(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/truehd-dv.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -267,10 +267,10 @@
       "pattern": "(?i)\\btrue[- .]?hd\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/truehd.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -280,10 +280,10 @@
       "pattern": "(?i)\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/ddplus.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -293,10 +293,10 @@
       "pattern": "(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/ddplus-dv.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -306,10 +306,10 @@
       "pattern": "(?i)\\b(?:dd|ac[- .]?3|dolby digital)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/dd.svg",
       "isEnabled": true,
-      "tagColor": "#21143F",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#EDE9FE",
-      "borderColor": "#A78BFA",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -319,10 +319,10 @@
       "pattern": "(?i)\\b7[. ]1\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/7-1.svg",
       "isEnabled": true,
-      "tagColor": "#082F49",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#E0F2FE",
-      "borderColor": "#38BDF8",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -332,10 +332,10 @@
       "pattern": "(?i)\\b5[. ]1\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/5-1.svg",
       "isEnabled": true,
-      "tagColor": "#082F49",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#E0F2FE",
-      "borderColor": "#38BDF8",
+      "textColor": "#111827",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -345,10 +345,10 @@
       "pattern": "(?i)\\b(?:netflix|nf)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/netflix.svg",
       "isEnabled": true,
-      "tagColor": "#240404",
+      "tagColor": "#E50914",
       "tagStyle": "filled",
       "textColor": "#FFFFFF",
-      "borderColor": "#E50914",
+      "borderColor": "#B91C1C",
       "type": "filter"
     },
     {
@@ -358,10 +358,10 @@
       "pattern": "(?i)\\b(?:prime video|amazon|amzn)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/prime-video.svg",
       "isEnabled": true,
-      "tagColor": "#061525",
+      "tagColor": "#00A8E1",
       "tagStyle": "filled",
-      "textColor": "#E0F7FF",
-      "borderColor": "#00A8E1",
+      "textColor": "#031926",
+      "borderColor": "#0284C7",
       "type": "filter"
     },
     {
@@ -371,10 +371,10 @@
       "pattern": "(?i)\\b(?:apple tv\\+?|atvp)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/apple-tv.svg",
       "isEnabled": true,
-      "tagColor": "#101010",
+      "tagColor": "#F8FAFC",
       "tagStyle": "filled",
-      "textColor": "#FFFFFF",
-      "borderColor": "#F5F5F7",
+      "textColor": "#050505",
+      "borderColor": "#CBD5E1",
       "type": "filter"
     },
     {
@@ -384,10 +384,10 @@
       "pattern": "(?i)\\b(?:disney\\+?|dsnp)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/disney-plus.svg",
       "isEnabled": true,
-      "tagColor": "#07163A",
+      "tagColor": "#38BDF8",
       "tagStyle": "filled",
-      "textColor": "#E0F2FE",
-      "borderColor": "#7DD3FC",
+      "textColor": "#06152A",
+      "borderColor": "#0284C7",
       "type": "filter"
     },
     {
@@ -397,10 +397,10 @@
       "pattern": "(?i)\\b(?:max|hbo max|hbom)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/max.svg",
       "isEnabled": true,
-      "tagColor": "#120A35",
+      "tagColor": "#7C3AED",
       "tagStyle": "filled",
-      "textColor": "#F5F3FF",
-      "borderColor": "#8B5CF6",
+      "textColor": "#FFFFFF",
+      "borderColor": "#5B21B6",
       "type": "filter"
     },
     {
@@ -410,10 +410,10 @@
       "pattern": "(?i)\\bhulu\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/hulu.svg",
       "isEnabled": true,
-      "tagColor": "#052E16",
+      "tagColor": "#1CE783",
       "tagStyle": "filled",
-      "textColor": "#DCFCE7",
-      "borderColor": "#1CE783",
+      "textColor": "#042B16",
+      "borderColor": "#16A34A",
       "type": "filter"
     },
     {
@@ -423,10 +423,10 @@
       "pattern": "(?i)\\bpeacock\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/peacock.svg",
       "isEnabled": true,
-      "tagColor": "#25130A",
+      "tagColor": "#FDBA74",
       "tagStyle": "filled",
-      "textColor": "#FFEDD5",
-      "borderColor": "#FDBA74",
+      "textColor": "#2B1200",
+      "borderColor": "#EA580C",
       "type": "filter"
     },
     {
@@ -436,10 +436,10 @@
       "pattern": "(?i)\\b(?:paramount\\+?|pmtp)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/paramount-plus.svg",
       "isEnabled": true,
-      "tagColor": "#061C3D",
+      "tagColor": "#60A5FA",
       "tagStyle": "filled",
-      "textColor": "#DBEAFE",
-      "borderColor": "#60A5FA",
+      "textColor": "#07172D",
+      "borderColor": "#2563EB",
       "type": "filter"
     },
     {
@@ -449,10 +449,10 @@
       "pattern": "(?i)\\bcrave\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/crave.svg",
       "isEnabled": true,
-      "tagColor": "#031D2B",
+      "tagColor": "#22D3EE",
       "tagStyle": "filled",
-      "textColor": "#CFFAFE",
-      "borderColor": "#22D3EE",
+      "textColor": "#06232A",
+      "borderColor": "#0891B2",
       "type": "filter"
     },
     {
@@ -462,10 +462,10 @@
       "pattern": "(?i)\\b(?:crunchyroll|crunchy roll|cr)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/svg/crunchyroll.svg",
       "isEnabled": true,
-      "tagColor": "#2A1204",
+      "tagColor": "#F97316",
       "tagStyle": "filled",
-      "textColor": "#FFEDD5",
-      "borderColor": "#F97316",
+      "textColor": "#FFFFFF",
+      "borderColor": "#C2410C",
       "type": "filter"
     }
   ],
