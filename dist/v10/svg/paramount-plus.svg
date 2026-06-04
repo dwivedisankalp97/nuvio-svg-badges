@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" role="img" aria-label="PARAMOUNT+">
-  <path d="M2.2 4.2v7.6L7.8 8z" fill="#F2F5F8"/>
-  <path fill="#F2F5F8" stroke="#F2F5F8" stroke-width="0.32" stroke-linejoin="round" paint-order="stroke fill" d="M13.86 8.22L13.86 8.22L12.09 8.22L12.09 7.35L13.86 7.35Q14.37 7.35 14.67 7.15Q14.98 6.95 15.13 6.59Q15.27 6.23 15.27 5.78L15.27 5.78Q15.27 5.36 15.13 4.99Q14.98 4.63 14.67 4.40Q14.37 4.17 13.86 4.17L13.86 4.17L12.31 4.17L12.31 11.40L11.28 11.40L11.28 3.30L13.86 3.30Q14.65 3.30 15.19 3.61Q15.73 3.93 16.01 4.49Q16.29 5.05 16.29 5.77L16.29 5.77Q16.29 6.55 16.01 7.10Q15.73 7.65 15.19 7.93Q14.65 8.22 13.86 8.22ZM17.21 7.05L21.87 7.05L21.87 8.02L17.21 8.02L17.21 7.05ZM19.06 4.69L20.04 4.69L20.04 10.59L19.06 10.59L19.06 4.69Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" role="img" aria-label="PARAMOUNT+">
+  <g transform="translate(0.00 3.20) scale(0.30000)"><path d="M8 24.5V7.5h10.2c4.4 0 7.2 2.6 7.2 6.5 0 4.1-2.9 6.6-7.4 6.6h-5.5v3.9zm4.5-8.1h5.1c2.2 0 3.4-1 3.4-2.8 0-1.7-1.2-2.8-3.4-2.8h-5.1z" fill="#F2F5F8"/>
+  <path d="M31.8 10h2.8v4.5H39v2.8h-4.4v4.5h-2.8v-4.5h-4.4v-2.8h4.4z" fill="#F2F5F8"/>
+  <path d="M6.6 6.8c6.8-4.4 19.5-4.4 26.7 0" fill="none" stroke="#F2F5F8" stroke-width="2" stroke-linecap="round"/></g>
 </svg>

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="16" viewBox="0 0 35 16" role="img" aria-label="APPLE TV+">
-  <path d="M2.2 4.2v7.6L7.8 8z" fill="#F2F5F8"/>
-  <path fill="#F2F5F8" stroke="#F2F5F8" stroke-width="0.32" stroke-linejoin="round" paint-order="stroke fill" d="M13.66 3.79L13.66 4.47L11.58 11.40L10.60 11.40L13.05 3.79L13.66 3.79ZM16.32 11.40L15.34 11.40L13.26 4.47L13.25 3.79L13.87 3.79L16.32 11.40ZM11.67 8.58L15.34 8.58L15.34 9.41L11.67 9.41L11.67 8.58ZM18.86 3.79L19.81 3.79L19.81 11.40L18.86 11.40L18.86 3.79ZM16.86 3.79L21.81 3.79L21.81 4.62L16.86 4.62L16.86 3.79ZM24.80 11.40L25.02 10.25L26.85 3.79L27.90 3.79L25.53 11.40L24.80 11.40ZM22.34 3.79L23.38 3.79L25.19 10.25L25.43 11.40L24.70 11.40L22.34 3.79ZM28.56 7.32L32.94 7.32L32.94 8.23L28.56 8.23L28.56 7.32ZM30.30 5.10L31.22 5.10L31.22 10.64L30.30 10.64L30.30 5.10Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="APPLE TV+">
+  <g transform="translate(0.00 3.20) scale(0.30000)"><path d="M5 9.8V6h20.5v3.8H18v16.4h-5V9.8z" fill="#F2F5F8"/>
+  <path d="M29.2 26.2L21.8 6h5.4l4.7 14.1L36.6 6h5.2l-7.4 20.2z" fill="#F2F5F8"/>
+  <path d="M43.7 11.2h3.2v5.1H52v3.1h-5.1v5.1h-3.2v-5.1h-5.1v-3.1h5.1z" fill="#F2F5F8"/></g>
 </svg>

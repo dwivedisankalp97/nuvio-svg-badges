@@ -263,60 +263,10 @@ function assetSvgFor(badge, style) {
 `;
 }
 
-function wordmarkSvgFor(badge, style) {
-  const label = style.wordmark || badge.label || badge.name;
-  const fontSize = style.wordmarkSize || 11.2;
-  const padding = style.wordmarkPadding ?? 1.4;
-  const y = style.wordmarkY || 11.4;
-  const mark = style.wordmarkMark || 'none';
-  const markWidth = mark === 'play' ? 7.2 : 0;
-  const markGap = mark === 'play' ? 1.6 : 0;
-
-  if (!textRenderer) {
-    const width = Math.max(18, Math.ceil(markWidth + markGap + label.length * 6.1 + padding * 2));
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
-  ${mark === 'play' ? `<path d="M2.2 4.2v7.6L7.8 8z" fill="${style.icon || style.text}"/>` : ''}
-  <text x="${markWidth + markGap + (width - markWidth - markGap) / 2}" y="${y}" fill="${style.icon || style.text}" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="800">${esc(label)}</text>
-</svg>
-`;
-  }
-
-  const metrics = textRenderer.getMetrics(label, {
-    fontSize,
-    kerning: true,
-    anchor: 'left baseline',
-  });
-  const width = Math.max(18, Math.ceil(markWidth + markGap + metrics.width + padding * 2));
-  const x = padding + markWidth + markGap + (width - markWidth - markGap - padding * 2 - metrics.width) / 2;
-  const path = textRenderer.getPath(label, {
-    x,
-    y,
-    fontSize,
-    anchor: 'left baseline',
-    kerning: true,
-    attributes: {
-      fill: style.icon || style.text,
-      stroke: style.icon || style.text,
-      'stroke-width': style.wordmarkStroke ?? 0.32,
-      'stroke-linejoin': 'round',
-      'paint-order': 'stroke fill',
-    },
-  });
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
-  ${mark === 'play' ? `<path d="M2.2 4.2v7.6L7.8 8z" fill="${style.icon || style.text}"/>` : ''}
-  ${path}
-</svg>
-`;
-}
-
 function svgFor(badge) {
   const style = styleFor(badge);
   if (style.asset || style.assets) {
     return assetSvgFor(badge, style);
-  }
-  if (style.wordmark) {
-    return wordmarkSvgFor(badge, style);
   }
 
   const mark = style.mark || 'none';
