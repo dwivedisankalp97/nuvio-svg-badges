@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66" height="20" viewBox="0 0 66 20" role="img" aria-label="DD+DV">
+  <defs>
+    <linearGradient id="g-ddplus-dv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#F8FAFC" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="64" height="18" rx="5" fill="url(#g-ddplus-dv)" stroke="#E5E7EB" stroke-width="1.35"/>
+  <path d="M5 3h56" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  <g><path d="M6 5h5.4c3 0 5.4 2.2 5.4 5s-2.4 5-5.4 5H6z" fill="#0F172A"/><path d="M9.4 6.3v7.4c1.9-.4 3.4-2 3.4-3.7S11.3 6.7 9.4 6.3z" fill="#F8FAFC"/><path d="M18.3 5h2.7v10h-2.7z" fill="#0F172A"/></g>
+  <text x="40.5" y="13.8" fill="#050505" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="11.1" font-weight="900" letter-spacing=".2">DD+DV</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73" height="20" viewBox="0 0 73 20" role="img" aria-label="HDR10+">
+  <defs>
+    <linearGradient id="g-hdr10plus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FACC15"/>
+      <stop offset="1" stop-color="#FACC15" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="71" height="18" rx="5" fill="url(#g-hdr10plus)" stroke="#FDE68A" stroke-width="1.35"/>
+  <path d="M5 3h63" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  <g><path d="M12 3.7 L13.8 8.5 L18.5 10 L13.8 11.5 L12 16.3 L10.2 11.5 L5.5 10 L10.2 8.5 Z" fill="#713F12" opacity=".92"/></g>
+  <text x="44" y="13.8" fill="#171000" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="11.1" font-weight="900" letter-spacing=".2">HDR10+</text>
+</svg>

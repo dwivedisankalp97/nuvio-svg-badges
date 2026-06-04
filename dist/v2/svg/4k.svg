@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="20" viewBox="0 0 42 20" role="img" aria-label="4K">
+  <defs>
+    <linearGradient id="g-4k" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDE047"/>
+      <stop offset="1" stop-color="#FDE047" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="40" height="18" rx="5" fill="url(#g-4k)" stroke="#FACC15" stroke-width="1.35"/>
+  <path d="M5 3h32" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  
+  <text x="21" y="13.8" fill="#151000" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="12.2" font-weight="900" letter-spacing=".2">4K</text>
+</svg>

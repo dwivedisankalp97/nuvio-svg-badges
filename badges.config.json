@@ -1,0 +1,302 @@
+{
+  "version": "v2",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v2",
+  "groups": [
+    { "id": "quality", "name": "Quality", "color": "#38BDF8" },
+    { "id": "resolution", "name": "Resolution", "color": "#FDE047" },
+    { "id": "visual", "name": "Visual", "color": "#FACC15" },
+    { "id": "audio", "name": "Audio", "color": "#F8FAFC" },
+    { "id": "channels", "name": "Channels", "color": "#F8FAFC" },
+    { "id": "streaming", "name": "Streaming", "color": "#F87171" }
+  ],
+  "badges": [
+    {
+      "groupId": "quality",
+      "id": "remux",
+      "name": "Remux",
+      "label": "REMUX",
+      "pattern": "(?i)\\b(?:remux|blu[- .]?ray remux)\\b",
+      "style": { "fill": "#052E4F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#7DD3FC", "mark": "diamond" }
+    },
+    {
+      "groupId": "quality",
+      "id": "bluray",
+      "name": "BluRay",
+      "label": "BLURAY",
+      "pattern": "(?i)\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
+      "style": { "fill": "#0B2A55", "stroke": "#60A5FA", "text": "#DBEAFE", "accent": "#93C5FD", "mark": "disc" }
+    },
+    {
+      "groupId": "quality",
+      "id": "webdl",
+      "name": "WebDL",
+      "label": "WEB-DL",
+      "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
+      "style": { "fill": "#0F2C3F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#22D3EE", "mark": "signal" }
+    },
+    {
+      "groupId": "resolution",
+      "id": "4k",
+      "name": "4K",
+      "label": "4K",
+      "pattern": "(?i)\\b(?:2160p?|4k|uhd)\\b",
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+    },
+    {
+      "groupId": "resolution",
+      "id": "1080p",
+      "name": "1080p",
+      "label": "1080P",
+      "pattern": "(?i)\\b1080p?\\b",
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+    },
+    {
+      "groupId": "resolution",
+      "id": "720p",
+      "name": "720p",
+      "label": "720P",
+      "pattern": "(?i)\\b720p?\\b",
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+    },
+    {
+      "groupId": "visual",
+      "id": "seadex",
+      "name": "SeaDex",
+      "label": "SEADEX",
+      "pattern": "(?i)\\bseadex\\b",
+      "style": { "fill": "#10B981", "stroke": "#34D399", "text": "#022C22", "accent": "#ECFDF5", "mark": "star" }
+    },
+    {
+      "groupId": "visual",
+      "id": "hdr10plus",
+      "name": "HDR10+",
+      "label": "HDR10+",
+      "pattern": "(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b",
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+    },
+    {
+      "groupId": "visual",
+      "id": "hdr10",
+      "name": "HDR10",
+      "label": "HDR10",
+      "pattern": "(?i)\\bhdr10\\b",
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+    },
+    {
+      "groupId": "visual",
+      "id": "hdr",
+      "name": "HDR",
+      "label": "HDR",
+      "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+    },
+    {
+      "groupId": "visual",
+      "id": "imax-enhanced",
+      "name": "IMAX Enhanced",
+      "label": "IMAX E",
+      "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
+      "style": { "fill": "#0A0A0A", "stroke": "#E5E7EB", "text": "#FFFFFF", "accent": "#FACC15", "mark": "frame" }
+    },
+    {
+      "groupId": "visual",
+      "id": "imax",
+      "name": "IMAX",
+      "label": "IMAX",
+      "pattern": "(?i)\\bimax\\b",
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "frame" }
+    },
+    {
+      "groupId": "visual",
+      "id": "dv",
+      "name": "DV",
+      "label": "DV",
+      "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#111827", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "dtsx",
+      "name": "DTS:X",
+      "label": "dts:X",
+      "pattern": "(?i)\\b(?:dts[:. -]?x)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "audio",
+      "id": "dts-hd-ma",
+      "name": "DTS-HD MA",
+      "label": "dts-HD MA",
+      "pattern": "(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "audio",
+      "id": "dts-hd",
+      "name": "DTS-HD",
+      "label": "dts-HD",
+      "pattern": "(?i)\\bdts[- .]?hd\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "audio",
+      "id": "dts",
+      "name": "DTS",
+      "label": "dts",
+      "pattern": "(?i)\\bdts\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "audio",
+      "id": "atmos-dv",
+      "name": "Atmos+DV",
+      "label": "ATMOS+DV",
+      "pattern": "(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "atmos",
+      "name": "Atmos",
+      "label": "ATMOS",
+      "pattern": "(?i)\\b(?:atmos|dolby atmos)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "truehd-dv",
+      "name": "TrueHD+DV",
+      "label": "TRUEHD+DV",
+      "pattern": "(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "truehd",
+      "name": "TrueHD",
+      "label": "TRUEHD",
+      "pattern": "(?i)\\btrue[- .]?hd\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "ddplus",
+      "name": "DD+",
+      "label": "DD+",
+      "pattern": "(?i)\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "ddplus-dv",
+      "name": "DD+DV",
+      "label": "DD+DV",
+      "pattern": "(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "audio",
+      "id": "dd",
+      "name": "DD",
+      "label": "DD",
+      "pattern": "(?i)\\b(?:dd|ac[- .]?3|dolby digital)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+    },
+    {
+      "groupId": "channels",
+      "id": "7-1",
+      "name": "7.1",
+      "label": "7.1",
+      "pattern": "(?i)\\b7[. ]1\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "channels",
+      "id": "5-1",
+      "name": "5.1",
+      "label": "5.1",
+      "pattern": "(?i)\\b5[. ]1\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "netflix",
+      "name": "NETFLIX",
+      "label": "NETFLIX",
+      "pattern": "(?i)\\b(?:netflix|nf)\\b",
+      "style": { "fill": "#E50914", "stroke": "#FF2935", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "prime-video",
+      "name": "PRIME VIDEO",
+      "label": "PRIME",
+      "pattern": "(?i)\\b(?:prime video|amazon|amzn)\\b",
+      "style": { "fill": "#00A8E1", "stroke": "#38BDF8", "text": "#031926", "accent": "#031926", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "apple-tv",
+      "name": "APPLE TV+",
+      "label": "APPLE TV+",
+      "pattern": "(?i)\\b(?:apple tv\\+?|atvp)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#050505", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "disney-plus",
+      "name": "DISNEY+",
+      "label": "DISNEY+",
+      "pattern": "(?i)\\b(?:disney\\+?|dsnp)\\b",
+      "style": { "fill": "#38BDF8", "stroke": "#7DD3FC", "text": "#06152A", "accent": "#06152A", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "max",
+      "name": "MAX",
+      "label": "MAX",
+      "pattern": "(?i)\\b(?:max|hbo max|hbom)\\b",
+      "style": { "fill": "#7C3AED", "stroke": "#A78BFA", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "hulu",
+      "name": "HULU",
+      "label": "HULU",
+      "pattern": "(?i)\\bhulu\\b",
+      "style": { "fill": "#1CE783", "stroke": "#86EFAC", "text": "#042B16", "accent": "#042B16", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "peacock",
+      "name": "PEACOCK",
+      "label": "PEACOCK",
+      "pattern": "(?i)\\bpeacock\\b",
+      "style": { "fill": "#FDBA74", "stroke": "#FED7AA", "text": "#2B1200", "accent": "#2B1200", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "paramount-plus",
+      "name": "PARAMOUNT+",
+      "label": "PARAMOUNT+",
+      "pattern": "(?i)\\b(?:paramount\\+?|pmtp)\\b",
+      "style": { "fill": "#60A5FA", "stroke": "#93C5FD", "text": "#07172D", "accent": "#07172D", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "crave",
+      "name": "CRAVE",
+      "label": "CRAVE",
+      "pattern": "(?i)\\bcrave\\b",
+      "style": { "fill": "#22D3EE", "stroke": "#67E8F9", "text": "#06232A", "accent": "#06232A", "mark": "none" }
+    },
+    {
+      "groupId": "streaming",
+      "id": "crunchyroll",
+      "name": "CRUNCHY ROLL",
+      "label": "CRUNCHY",
+      "pattern": "(?i)\\b(?:crunchyroll|crunchy roll|cr)\\b",
+      "style": { "fill": "#F97316", "stroke": "#FDBA74", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+    }
+  ]
+}

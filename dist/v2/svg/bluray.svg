@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73" height="20" viewBox="0 0 73 20" role="img" aria-label="BluRay">
+  <defs>
+    <linearGradient id="g-bluray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B2A55"/>
+      <stop offset="1" stop-color="#0B2A55" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="71" height="18" rx="5" fill="url(#g-bluray)" stroke="#60A5FA" stroke-width="1.35"/>
+  <path d="M5 3h63" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  <g><circle cx="12" cy="10" r="5.4" fill="none" stroke="#93C5FD" stroke-width="1.7"/><circle cx="12" cy="10" r="1.8" fill="#93C5FD"/></g>
+  <text x="44" y="13.8" fill="#DBEAFE" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="11.1" font-weight="900" letter-spacing=".2">BLURAY</text>
+</svg>

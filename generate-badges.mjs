@@ -1,326 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+const CONFIG_PATH = path.resolve('badges.config.json');
+const OUT_ROOT = path.resolve('dist');
+
+const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
+const VERSION = process.env.BADGE_VERSION || config.version || 'v2';
 const BASE_URL =
   process.env.BADGE_BASE_URL ||
-  'https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist';
-const OUT_DIR = path.resolve('dist');
+  config.baseUrl ||
+  `https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/${VERSION}`;
+const OUT_DIR = path.join(OUT_ROOT, VERSION);
 const SVG_DIR = path.join(OUT_DIR, 'svg');
-
-const groups = [
-  { id: 'quality', name: 'Quality', color: '#60A5FA' },
-  { id: 'resolution', name: 'Resolution', color: '#22C55E' },
-  { id: 'visual', name: 'Visual', color: '#F59E0B' },
-  { id: 'audio', name: 'Audio', color: '#A78BFA' },
-  { id: 'channels', name: 'Channels', color: '#38BDF8' },
-  { id: 'streaming', name: 'Streaming', color: '#F87171' },
-];
-
-const badges = [
-  {
-    groupId: 'quality',
-    id: 'remux',
-    name: 'Remux',
-    label: 'REMUX',
-    pattern: '(?i)\\b(?:remux|blu[- .]?ray remux)\\b',
-  },
-  {
-    groupId: 'quality',
-    id: 'bluray',
-    name: 'BluRay',
-    label: 'BLURAY',
-    pattern: '(?i)\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b',
-  },
-  {
-    groupId: 'quality',
-    id: 'webdl',
-    name: 'WebDL',
-    label: 'WEB-DL',
-    pattern: '(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b',
-  },
-  {
-    groupId: 'resolution',
-    id: '4k',
-    name: '4K',
-    label: '4K',
-    pattern: '(?i)\\b(?:2160p?|4k|uhd)\\b',
-  },
-  {
-    groupId: 'resolution',
-    id: '1080p',
-    name: '1080p',
-    label: '1080P',
-    pattern: '(?i)\\b1080p?\\b',
-  },
-  {
-    groupId: 'resolution',
-    id: '720p',
-    name: '720p',
-    label: '720P',
-    pattern: '(?i)\\b720p?\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'seadex',
-    name: 'SeaDex',
-    label: 'SEADEX',
-    pattern: '(?i)\\bseadex\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'hdr10plus',
-    name: 'HDR10+',
-    label: 'HDR10+',
-    pattern: '(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'hdr10',
-    name: 'HDR10',
-    label: 'HDR10',
-    pattern: '(?i)\\bhdr10\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'hdr',
-    name: 'HDR',
-    label: 'HDR',
-    pattern: '(?i)\\b(?:hdr|high dynamic range)\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'imax-enhanced',
-    name: 'IMAX Enhanced',
-    label: 'IMAX E',
-    pattern: '(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'imax',
-    name: 'IMAX',
-    label: 'IMAX',
-    pattern: '(?i)\\bimax\\b',
-  },
-  {
-    groupId: 'visual',
-    id: 'dv',
-    name: 'DV',
-    label: 'DV',
-    pattern: '(?i)\\b(?:dv|dovi|dolby vision)\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'dtsx',
-    name: 'DTS:X',
-    label: 'DTS:X',
-    pattern: '(?i)\\b(?:dts[:. -]?x)\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'dts-hd-ma',
-    name: 'DTS-HD MA',
-    label: 'DTS-HD MA',
-    pattern: '(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'dts-hd',
-    name: 'DTS-HD',
-    label: 'DTS-HD',
-    pattern: '(?i)\\bdts[- .]?hd\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'dts',
-    name: 'DTS',
-    label: 'DTS',
-    pattern: '(?i)\\bdts\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'atmos-dv',
-    name: 'Atmos+DV',
-    label: 'ATMOS+DV',
-    pattern: '(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)',
-  },
-  {
-    groupId: 'audio',
-    id: 'atmos',
-    name: 'Atmos',
-    label: 'ATMOS',
-    pattern: '(?i)\\b(?:atmos|dolby atmos)\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'truehd-dv',
-    name: 'TrueHD+DV',
-    label: 'TRUEHD+DV',
-    pattern: '(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)',
-  },
-  {
-    groupId: 'audio',
-    id: 'truehd',
-    name: 'TrueHD',
-    label: 'TRUEHD',
-    pattern: '(?i)\\btrue[- .]?hd\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'ddplus',
-    name: 'DD+',
-    label: 'DD+',
-    pattern: '(?i)\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b',
-  },
-  {
-    groupId: 'audio',
-    id: 'ddplus-dv',
-    name: 'DD+DV',
-    label: 'DD+DV',
-    pattern: '(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)',
-  },
-  {
-    groupId: 'audio',
-    id: 'dd',
-    name: 'DD',
-    label: 'DD',
-    pattern: '(?i)\\b(?:dd|ac[- .]?3|dolby digital)\\b',
-  },
-  {
-    groupId: 'channels',
-    id: '7-1',
-    name: '7.1',
-    label: '7.1',
-    pattern: '(?i)\\b7[. ]1\\b',
-  },
-  {
-    groupId: 'channels',
-    id: '5-1',
-    name: '5.1',
-    label: '5.1',
-    pattern: '(?i)\\b5[. ]1\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'netflix',
-    name: 'NETFLIX',
-    label: 'NETFLIX',
-    pattern: '(?i)\\b(?:netflix|nf)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'prime-video',
-    name: 'PRIME VIDEO',
-    label: 'PRIME',
-    pattern: '(?i)\\b(?:prime video|amazon|amzn)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'apple-tv',
-    name: 'APPLE TV+',
-    label: 'APPLE TV+',
-    pattern: '(?i)\\b(?:apple tv\\+?|atvp)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'disney-plus',
-    name: 'DISNEY+',
-    label: 'DISNEY+',
-    pattern: '(?i)\\b(?:disney\\+?|dsnp)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'max',
-    name: 'MAX',
-    label: 'MAX',
-    pattern: '(?i)\\b(?:max|hbo max|hbom)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'hulu',
-    name: 'HULU',
-    label: 'HULU',
-    pattern: '(?i)\\bhulu\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'peacock',
-    name: 'PEACOCK',
-    label: 'PEACOCK',
-    pattern: '(?i)\\bpeacock\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'paramount-plus',
-    name: 'PARAMOUNT+',
-    label: 'PARAMOUNT+',
-    pattern: '(?i)\\b(?:paramount\\+?|pmtp)\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'crave',
-    name: 'CRAVE',
-    label: 'CRAVE',
-    pattern: '(?i)\\bcrave\\b',
-  },
-  {
-    groupId: 'streaming',
-    id: 'crunchyroll',
-    name: 'CRUNCHY ROLL',
-    label: 'CRUNCHY',
-    pattern: '(?i)\\b(?:crunchyroll|crunchy roll|cr)\\b',
-  },
-];
-
-const groupStyles = {
-  quality: {
-    fill: '#22C55E',
-    stroke: '#16A34A',
-    text: '#03140A',
-  },
-  resolution: {
-    fill: '#FDE047',
-    stroke: '#EAB308',
-    text: '#1F1A00',
-  },
-  visual: {
-    fill: '#FACC15',
-    stroke: '#CA8A04',
-    text: '#1F1800',
-  },
-  audio: {
-    fill: '#F8FAFC',
-    stroke: '#CBD5E1',
-    text: '#111827',
-  },
-  channels: {
-    fill: '#F8FAFC',
-    stroke: '#CBD5E1',
-    text: '#111827',
-  },
-  streaming: {
-    fill: '#111827',
-    stroke: '#374151',
-    text: '#FFFFFF',
-  },
-};
-
-const specialStyles = {
-  netflix: { fill: '#E50914', stroke: '#B91C1C', text: '#FFFFFF' },
-  'prime-video': { fill: '#00A8E1', stroke: '#0284C7', text: '#031926' },
-  'apple-tv': { fill: '#F8FAFC', stroke: '#CBD5E1', text: '#050505' },
-  'disney-plus': { fill: '#38BDF8', stroke: '#0284C7', text: '#06152A' },
-  max: { fill: '#7C3AED', stroke: '#5B21B6', text: '#FFFFFF' },
-  hulu: { fill: '#1CE783', stroke: '#16A34A', text: '#042B16' },
-  peacock: { fill: '#FDBA74', stroke: '#EA580C', text: '#2B1200' },
-  'paramount-plus': { fill: '#60A5FA', stroke: '#2563EB', text: '#07172D' },
-  crave: { fill: '#22D3EE', stroke: '#0891B2', text: '#06232A' },
-  crunchyroll: { fill: '#F97316', stroke: '#C2410C', text: '#FFFFFF' },
-};
-
-function ensureDirs() {
-  fs.rmSync(OUT_DIR, { recursive: true, force: true });
-  fs.mkdirSync(SVG_DIR, { recursive: true });
-}
+const BADGE_HEIGHT = 20;
 
 function esc(value) {
   return String(value)
@@ -330,36 +22,83 @@ function esc(value) {
     .replaceAll('"', '&quot;');
 }
 
-function widthFor(label) {
-  return Math.max(38, Math.min(86, Math.round(label.length * 7.2 + 12)));
+function ensureDirs() {
+  fs.mkdirSync(SVG_DIR, { recursive: true });
+}
+
+function widthFor(label, mark) {
+  const markWidth = mark === 'none' ? 0 : 14;
+  return Math.max(42, Math.min(92, Math.round(label.length * 7.3 + 15 + markWidth)));
 }
 
 function fontSizeFor(label) {
-  if (label.length >= 10) return 10.4;
-  if (label.length >= 9) return 10.8;
-  if (label.length >= 8) return 11.2;
-  if (label.length <= 3) return 13.2;
-  return 12.2;
+  if (label.length >= 10) return 9.3;
+  if (label.length >= 9) return 9.8;
+  if (label.length >= 8) return 10.2;
+  if (label.length <= 3) return 12.2;
+  return 11.1;
+}
+
+function markSvg(mark, style) {
+  switch (mark) {
+    case 'diamond':
+      return `<path d="M12 4.5 L17.5 10 L12 15.5 L6.5 10 Z" fill="${style.accent}" opacity=".95"/>`;
+    case 'disc':
+      return `<circle cx="12" cy="10" r="5.4" fill="none" stroke="${style.accent}" stroke-width="1.7"/><circle cx="12" cy="10" r="1.8" fill="${style.accent}"/>`;
+    case 'signal':
+      return `<path d="M6.5 13.8 h11 v2.7h-11zM9.3 9.6 h8.2v2.7H9.3zM12.1 5.4h5.4v2.7h-5.4z" fill="${style.accent}" opacity=".95"/>`;
+    case 'star':
+      return `<path d="M12 3.8l1.9 4 4.3.5-3.2 3 .8 4.3-3.8-2.1-3.8 2.1.8-4.3-3.2-3 4.3-.5z" fill="${style.accent}"/>`;
+    case 'spark':
+      return `<path d="M12 3.7 L13.8 8.5 L18.5 10 L13.8 11.5 L12 16.3 L10.2 11.5 L5.5 10 L10.2 8.5 Z" fill="${style.accent}" opacity=".92"/>`;
+    case 'frame':
+      return `<path d="M6 6h12v8H6z" fill="none" stroke="${style.accent}" stroke-width="1.7"/><path d="M8.5 8.5h7v3H8.5z" fill="${style.accent}" opacity=".55"/>`;
+    case 'dolby':
+      return `<path d="M6 5h5.4c3 0 5.4 2.2 5.4 5s-2.4 5-5.4 5H6z" fill="${style.accent}"/><path d="M9.4 6.3v7.4c1.9-.4 3.4-2 3.4-3.7S11.3 6.7 9.4 6.3z" fill="${style.fill}"/><path d="M18.3 5h2.7v10h-2.7z" fill="${style.accent}"/>`;
+    default:
+      return '';
+  }
 }
 
 function svgFor(badge) {
-  const style = specialStyles[badge.id] || groupStyles[badge.groupId];
-  const width = widthFor(badge.label);
+  const style = badge.style;
+  const mark = style.mark || 'none';
+  const width = widthFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
+  const hasMark = mark !== 'none';
+  const textX = hasMark ? (width + 15) / 2 : width / 2;
   const label = esc(badge.label);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="24" viewBox="0 0 ${width} 24" role="img" aria-label="${esc(badge.name)}">
-  <text x="${width / 2}" y="16" fill="${style.text}" text-anchor="middle"
-    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="${fontSize}" font-weight="900" letter-spacing=".25">${label}</text>
+  const id = esc(badge.id);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
+  <defs>
+    <linearGradient id="g-${id}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${style.fill}"/>
+      <stop offset="1" stop-color="${style.fill}" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="${width - 2}" height="18" rx="5" fill="url(#g-${id})" stroke="${style.stroke}" stroke-width="1.35"/>
+  <path d="M5 3h${width - 10}" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  ${hasMark ? `<g>${markSvg(mark, style)}</g>` : ''}
+  <text x="${textX}" y="13.8" fill="${style.text}" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="${fontSize}" font-weight="900" letter-spacing=".2">${label}</text>
 </svg>
 `;
 }
 
-function writeBadges() {
+function build() {
   ensureDirs();
-  const filters = badges.map((badge) => {
+
+  const groups = config.groups.map((group) => ({
+    id: group.id,
+    name: group.name,
+    color: group.color,
+    isExpanded: true,
+  }));
+
+  const filters = config.badges.map((badge) => {
     const filename = `${badge.id}.svg`;
     fs.writeFileSync(path.join(SVG_DIR, filename), svgFor(badge));
-    const style = specialStyles[badge.id] || groupStyles[badge.groupId];
     return {
       id: badge.id,
       groupId: badge.groupId,
@@ -367,37 +106,37 @@ function writeBadges() {
       pattern: badge.pattern,
       imageURL: `${BASE_URL}/svg/${filename}`,
       isEnabled: true,
-      tagColor: style.fill,
-      tagStyle: 'filled',
-      textColor: style.text,
-      borderColor: style.stroke,
+      tagColor: '',
+      tagStyle: '',
+      textColor: badge.style.text,
+      borderColor: '',
       type: 'filter',
     };
   });
 
-  const payload = {
-    filters,
-    groups: groups.map((group) => ({ ...group, isExpanded: true })),
-  };
-  fs.writeFileSync(
-    path.join(OUT_DIR, 'badges.json'),
-    `${JSON.stringify(payload, null, 2)}\n`
-  );
-  fs.writeFileSync(
-    path.join(OUT_DIR, 'preview.html'),
-    `<!doctype html>
+  const payload = { filters, groups };
+  fs.writeFileSync(path.join(OUT_DIR, 'badges.json'), `${JSON.stringify(payload, null, 2)}\n`);
+  fs.writeFileSync(path.join(OUT_DIR, 'preview.html'), previewHtml(filters, groups));
+
+  // Compatibility copy for the original import URL. New imports should prefer /v2/.
+  fs.writeFileSync(path.join(OUT_ROOT, 'badges.json'), `${JSON.stringify(payload, null, 2)}\n`);
+  fs.writeFileSync(path.join(OUT_ROOT, 'preview.html'), previewHtml(filters, groups));
+}
+
+function previewHtml(filters, groups) {
+  return `<!doctype html>
 <meta charset="utf-8">
-<title>Aiosan Nuvio Badges</title>
+<title>Nuvio SVG Badges ${esc(VERSION)}</title>
 <style>
-  body { margin: 0; background: #09090b; color: #f4f4f5; font-family: Inter, system-ui, sans-serif; padding: 32px; }
+  body { margin: 0; background: #050505; color: #f4f4f5; font-family: Inter, system-ui, sans-serif; padding: 32px; }
   h1 { font-size: 24px; margin: 0 0 8px; }
   p { color: #a1a1aa; margin: 0 0 24px; }
   h2 { font-size: 16px; margin: 24px 0 10px; color: #e5e7eb; }
   .grid { display: flex; flex-wrap: wrap; gap: 8px; max-width: 920px; }
-  .chip { height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); padding: 2px 3px; box-sizing: border-box; }
+  .chip { height: 20px; display: inline-flex; align-items: center; justify-content: center; padding: 2px 3px; box-sizing: border-box; }
   .chip img { height: 16px; display: block; }
 </style>
-<h1>Aiosan Nuvio Badges</h1>
+<h1>Nuvio SVG Badges ${esc(VERSION)}</h1>
 <p>Import URL: <code>${BASE_URL}/badges.json</code></p>
 ${groups
   .map((group) => {
@@ -407,14 +146,13 @@ ${groups
 ${groupFilters
   .map(
     (filter) =>
-      `  <span class="chip" style="--bg:${filter.tagColor};--border:${filter.borderColor}"><img src="svg/${filter.id}.svg" alt="${esc(filter.name)}"></span>`
+      `  <span class="chip"><img src="svg/${filter.id}.svg" alt="${esc(filter.name)}"></span>`
   )
   .join('\n')}
 </div>`;
   })
   .join('\n')}
-`
-  );
+`;
 }
 
-writeBadges();
+build();

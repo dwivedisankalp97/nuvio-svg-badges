@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="20" viewBox="0 0 88 20" role="img" aria-label="PARAMOUNT+">
+  <defs>
+    <linearGradient id="g-paramount-plus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity=".86"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="86" height="18" rx="5" fill="url(#g-paramount-plus)" stroke="#93C5FD" stroke-width="1.35"/>
+  <path d="M5 3h78" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" stroke-linecap="round"/>
+  
+  <text x="44" y="13.8" fill="#07172D" text-anchor="middle"
+    font-family="Roboto Condensed, Roboto, Arial, sans-serif" font-size="9.3" font-weight="900" letter-spacing=".2">PARAMOUNT+</text>
+</svg>
