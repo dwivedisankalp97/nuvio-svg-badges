@@ -216,7 +216,7 @@
       "name": "NETFLIX",
       "label": "NETFLIX",
       "pattern": "(?i)\\b(?:netflix|nf)\\b",
-      "style": { "fill": "#E50914", "stroke": "#FF2935", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/netflix.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#E50914", "stroke": "#FF2935", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/netflix.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -224,7 +224,7 @@
       "name": "PRIME VIDEO",
       "label": "PRIME",
       "pattern": "(?i)\\b(?:prime video|amazon|amzn)\\b",
-      "style": { "fill": "#00A8E1", "stroke": "#38BDF8", "text": "#031926", "accent": "#031926", "mark": "none", "asset": "assets/badge-logos/streaming/prime-video.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#00A8E1", "stroke": "#38BDF8", "text": "#031926", "accent": "#031926", "mark": "none", "asset": "assets/badge-logos/streaming/prime-video.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -232,7 +232,7 @@
       "name": "APPLE TV+",
       "label": "APPLE TV+",
       "pattern": "(?i)\\b(?:apple tv\\+?|atvp)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#050505", "mark": "none", "asset": "assets/badge-logos/streaming/apple-tv.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#050505", "mark": "none", "asset": "assets/badge-logos/streaming/apple-tv.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -240,7 +240,7 @@
       "name": "DISNEY+",
       "label": "DISNEY+",
       "pattern": "(?i)\\b(?:disney\\+?|dsnp)\\b",
-      "style": { "fill": "#38BDF8", "stroke": "#7DD3FC", "text": "#06152A", "accent": "#06152A", "mark": "none", "asset": "assets/badge-logos/streaming/disney-plus.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#38BDF8", "stroke": "#7DD3FC", "text": "#06152A", "accent": "#06152A", "mark": "none", "asset": "assets/badge-logos/streaming/disney-plus.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -248,7 +248,7 @@
       "name": "MAX",
       "label": "MAX",
       "pattern": "(?i)\\b(?:max|hbo max|hbom)\\b",
-      "style": { "fill": "#7C3AED", "stroke": "#A78BFA", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/max.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#7C3AED", "stroke": "#A78BFA", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/max.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -256,7 +256,7 @@
       "name": "HULU",
       "label": "HULU",
       "pattern": "(?i)\\bhulu\\b",
-      "style": { "fill": "#1CE783", "stroke": "#86EFAC", "text": "#042B16", "accent": "#042B16", "mark": "none", "asset": "assets/badge-logos/streaming/hulu.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#1CE783", "stroke": "#86EFAC", "text": "#042B16", "accent": "#042B16", "mark": "none", "asset": "assets/badge-logos/streaming/hulu.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -264,7 +264,7 @@
       "name": "PEACOCK",
       "label": "PEACOCK",
       "pattern": "(?i)\\bpeacock\\b",
-      "style": { "fill": "#FDBA74", "stroke": "#FED7AA", "text": "#2B1200", "accent": "#2B1200", "mark": "none", "asset": "assets/badge-logos/streaming/peacock.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#FDBA74", "stroke": "#FED7AA", "text": "#2B1200", "accent": "#2B1200", "mark": "none", "asset": "assets/badge-logos/streaming/peacock.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -272,7 +272,7 @@
       "name": "PARAMOUNT+",
       "label": "PARAMOUNT+",
       "pattern": "(?i)\\b(?:paramount\\+?|pmtp)\\b",
-      "style": { "fill": "#60A5FA", "stroke": "#93C5FD", "text": "#07172D", "accent": "#07172D", "mark": "none", "asset": "assets/badge-logos/streaming/paramount-plus.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#60A5FA", "stroke": "#93C5FD", "text": "#07172D", "accent": "#07172D", "mark": "none", "asset": "assets/badge-logos/streaming/paramount-plus.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -280,7 +280,7 @@
       "name": "CRAVE",
       "label": "CRAVE",
       "pattern": "(?i)\\bcrave\\b",
-      "style": { "fill": "#22D3EE", "stroke": "#67E8F9", "text": "#06232A", "accent": "#06232A", "mark": "none", "asset": "assets/badge-logos/streaming/crave.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#22D3EE", "stroke": "#67E8F9", "text": "#06232A", "accent": "#06232A", "mark": "none", "asset": "assets/badge-logos/streaming/crave.svg", "assetHeight": 11.2 }
     },
     {
       "groupId": "streaming",
@@ -288,7 +288,7 @@
       "name": "CRUNCHY ROLL",
       "label": "CRUNCHY",
       "pattern": "(?i)\\b(?:crunchyroll|crunchy roll|cr)\\b",
-      "style": { "fill": "#F97316", "stroke": "#FDBA74", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/crunchyroll.svg", "assetHeight": 9.6 }
+      "style": { "fill": "#F97316", "stroke": "#FDBA74", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "asset": "assets/badge-logos/streaming/crunchyroll.svg", "assetHeight": 11.2 }
     }
   ]
 }

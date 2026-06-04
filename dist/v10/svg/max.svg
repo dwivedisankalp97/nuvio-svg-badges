@@ -1,5 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" role="img" aria-label="MAX">
-  <g transform="translate(0.00 3.20) scale(0.30000)"><path d="M5 26V6h5.3l6.2 10.3L22.7 6H28v20h-4.7V13.5l-5.5 9h-2.7l-5.5-9V26z" fill="#F2F5F8"/>
-  <path d="M30.6 26L38 6h5.4L51 26h-5.1l-1.3-3.8h-8l-1.3 3.8zm7.7-7.6h5l-2.5-7.4z" fill="#F2F5F8"/>
-  <path d="M47.2 6h5.6l4.1 6.3L61 6h5.2l-6.5 9.6 6.9 10.4h-5.6l-4.5-6.9-4.5 6.9h-5.3l6.9-10.3z" fill="#F2F5F8" transform="translate(-10)"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16" role="img" aria-label="MAX">
+  <g transform="translate(0.00 2.40) scale(0.70000)"><path d="M7.47 12L4.09 1.90L5.32 1.90L7.97 10.13L10.60 1.90L11.84 1.90L8.45 12L7.47 12ZM3.69 12L3.69 1.90L4.77 1.90L4.96 8.06L4.96 12L3.69 12ZM10.96 8.06L11.15 1.90L12.23 1.90L12.23 12L10.96 12L10.96 8.06ZM17.69 1.90L17.69 2.80L14.93 12L13.62 12L16.88 1.90L17.69 1.90ZM21.22 12L19.92 12L17.16 2.80L17.15 1.90L17.97 1.90L21.22 12ZM15.05 8.26L19.92 8.26L19.92 9.36L15.05 9.36L15.05 8.26ZM22.05 1.90L23.53 1.90L25.45 5.77L27.35 1.90L28.83 1.90L26.20 6.90L28.89 12L27.39 12L25.45 8.05L23.50 12L21.99 12L24.68 6.90L22.05 1.90Z" fill="#F2F5F8" stroke="#F2F5F8" stroke-width="0.85" stroke-linejoin="round" paint-order="stroke fill"/></g>
 </svg>
