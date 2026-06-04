@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="24" viewBox="0 0 67 24" role="img" aria-label="CRAVE">
+  <defs>
+    <linearGradient id="grad-crave" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031D2B"/>
+      <stop offset="1" stop-color="#050608"/>
+    </linearGradient>
+    <clipPath id="clip-crave">
+      <rect x="0.75" y="0.75" width="65.5" height="22.5" rx="6"/>
+    </clipPath>
+  </defs>
+  <rect x="0.75" y="0.75" width="65.5" height="22.5" rx="6" fill="url(#grad-crave)" stroke="#22D3EE" stroke-width="1.5"/>
+  <g clip-path="url(#clip-crave)">
+    <rect x="0" y="0" width="5" height="24" fill="#22D3EE"/>
+    <path d="M7 3 L16 3 L11 12 L17 12 L8 21 L11 14 L6 14 Z" fill="#22D3EE" opacity="0.22"/>
+  </g>
+  <text x="35.5" y="12.9" fill="#CFFAFE" text-anchor="middle" dominant-baseline="middle"
+    font-family="Inter, Roboto, Arial, sans-serif" font-size="10.5" font-weight="800" letter-spacing=".55">CRAVE</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58" height="24" viewBox="0 0 58 24" role="img" aria-label="5.1">
+  <defs>
+    <linearGradient id="grad-5-1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#082F49"/>
+      <stop offset="1" stop-color="#050608"/>
+    </linearGradient>
+    <clipPath id="clip-5-1">
+      <rect x="0.75" y="0.75" width="56.5" height="22.5" rx="6"/>
+    </clipPath>
+  </defs>
+  <rect x="0.75" y="0.75" width="56.5" height="22.5" rx="6" fill="url(#grad-5-1)" stroke="#38BDF8" stroke-width="1.5"/>
+  <g clip-path="url(#clip-5-1)">
+    <rect x="0" y="0" width="5" height="24" fill="#38BDF8"/>
+    <path d="M7 3 L16 3 L11 12 L17 12 L8 21 L11 14 L6 14 Z" fill="#38BDF8" opacity="0.22"/>
+  </g>
+  <text x="31" y="12.9" fill="#E0F2FE" text-anchor="middle" dominant-baseline="middle"
+    font-family="Inter, Roboto, Arial, sans-serif" font-size="10.5" font-weight="800" letter-spacing=".55">5.1</text>
+</svg>
