@@ -26,6 +26,7 @@ function esc(value) {
 }
 
 function ensureDirs() {
+  fs.rmSync(SVG_DIR, { recursive: true, force: true });
   fs.mkdirSync(SVG_DIR, { recursive: true });
 }
 
@@ -205,8 +206,119 @@ function labelTexts(label, x, fontSize, style, darkText) {
     ${textStyle}>${esc(label)}</text>`;
 }
 
+function readAsset(asset, style) {
+  const assetPath = path.resolve(asset);
+  const svg = fs.readFileSync(assetPath, 'utf8');
+  const width = Number(svg.match(/\bwidth="([^"]+)"/)?.[1] || 64);
+  const height = Number(svg.match(/\bheight="([^"]+)"/)?.[1] || 16);
+  const color = style.icon || style.text;
+  const content = svg
+    .replace(/<\?xml[^>]*>\s*/g, '')
+    .replace(/<!--[\s\S]*?-->\s*/g, '')
+    .replace(/^<svg\b[^>]*>/, '')
+    .replace(/<\/svg>\s*$/, '')
+    .replace(
+      /fill="#(?:FFFFFF|FEFEFE|FFFFFE|FFFEFE|FEFFFE|FEFFFF|FFFEFF)"/gi,
+      `fill="${color}"`
+    )
+    .replace(
+      /stroke="#(?:FFFFFF|FEFEFE|FFFFFE|FFFEFE|FEFFFE|FEFFFF|FFFEFF)"/gi,
+      `stroke="${color}"`
+    )
+    .trim();
+
+  return { width, height, content };
+}
+
+function assetSvgFor(badge, style) {
+  const assets = style.assets || (style.asset ? [style.asset] : []);
+  const targetHeight = style.assetHeight || config.theme?.assetHeight || 10.4;
+  const gap = style.assetGap ?? config.theme?.assetGap ?? 2;
+  const loaded = assets.map((asset) => {
+    const source = readAsset(asset, style);
+    const scale = targetHeight / source.height;
+    return {
+      ...source,
+      scale,
+      width: source.width * scale,
+    };
+  });
+  const width = Math.ceil(
+    loaded.reduce((total, source) => total + source.width, 0) +
+      Math.max(0, loaded.length - 1) * gap
+  );
+  const y = (BADGE_HEIGHT - targetHeight) / 2;
+  let x = 0;
+  const content = loaded
+    .map((source) => {
+      const group = `<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${source.scale.toFixed(5)})">${source.content}</g>`;
+      x += source.width + gap;
+      return group;
+    })
+    .join('\n  ');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
+  ${content}
+</svg>
+`;
+}
+
+function wordmarkSvgFor(badge, style) {
+  const label = style.wordmark || badge.label || badge.name;
+  const fontSize = style.wordmarkSize || 11.2;
+  const padding = style.wordmarkPadding ?? 1.4;
+  const y = style.wordmarkY || 11.4;
+  const mark = style.wordmarkMark || 'none';
+  const markWidth = mark === 'play' ? 7.2 : 0;
+  const markGap = mark === 'play' ? 1.6 : 0;
+
+  if (!textRenderer) {
+    const width = Math.max(18, Math.ceil(markWidth + markGap + label.length * 6.1 + padding * 2));
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
+  ${mark === 'play' ? `<path d="M2.2 4.2v7.6L7.8 8z" fill="${style.icon || style.text}"/>` : ''}
+  <text x="${markWidth + markGap + (width - markWidth - markGap) / 2}" y="${y}" fill="${style.icon || style.text}" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="800">${esc(label)}</text>
+</svg>
+`;
+  }
+
+  const metrics = textRenderer.getMetrics(label, {
+    fontSize,
+    kerning: true,
+    anchor: 'left baseline',
+  });
+  const width = Math.max(18, Math.ceil(markWidth + markGap + metrics.width + padding * 2));
+  const x = padding + markWidth + markGap + (width - markWidth - markGap - padding * 2 - metrics.width) / 2;
+  const path = textRenderer.getPath(label, {
+    x,
+    y,
+    fontSize,
+    anchor: 'left baseline',
+    kerning: true,
+    attributes: {
+      fill: style.icon || style.text,
+      stroke: style.icon || style.text,
+      'stroke-width': style.wordmarkStroke ?? 0.32,
+      'stroke-linejoin': 'round',
+      'paint-order': 'stroke fill',
+    },
+  });
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
+  ${mark === 'play' ? `<path d="M2.2 4.2v7.6L7.8 8z" fill="${style.icon || style.text}"/>` : ''}
+  ${path}
+</svg>
+`;
+}
+
 function svgFor(badge) {
   const style = styleFor(badge);
+  if (style.asset || style.assets) {
+    return assetSvgFor(badge, style);
+  }
+  if (style.wordmark) {
+    return wordmarkSvgFor(badge, style);
+  }
+
   const mark = style.mark || 'none';
   const { width, textX } = layoutFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);

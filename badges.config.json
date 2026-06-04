@@ -1,13 +1,16 @@
 {
-  "version": "v9",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v9",
+  "version": "v10",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v10",
   "theme": {
     "name": "monochrome-outline",
-    "fill": "#00000000",
-    "stroke": "#FFFFFF",
-    "text": "#FFFFFF",
-    "accent": "#FFFFFF",
-    "tagStyle": "bordered"
+    "fill": "#15181D",
+    "stroke": "#AEB7C4",
+    "text": "#F2F5F8",
+    "accent": "#F2F5F8",
+    "icon": "#F2F5F8",
+    "tagStyle": "bordered",
+    "assetHeight": 9.2,
+    "assetGap": 1.4
   },
   "font": {
     "renderer": "path",
@@ -29,7 +32,7 @@
       "name": "Remux",
       "label": "REMUX",
       "pattern": "(?i)\\b(?:remux|blu[- .]?ray remux)\\b",
-      "style": { "fill": "#052E4F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#7DD3FC", "mark": "remux" }
+      "style": { "fill": "#052E4F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#7DD3FC", "mark": "remux", "asset": "assets/badge-logos/white/white-remux.svg" }
     },
     {
       "groupId": "quality",
@@ -37,7 +40,7 @@
       "name": "BluRay",
       "label": "BLURAY",
       "pattern": "(?i)^(?!.*\\b(?:remux|blu[- .]?ray remux)\\b).*\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
-      "style": { "fill": "#0B2A55", "stroke": "#60A5FA", "text": "#DBEAFE", "accent": "#93C5FD", "mark": "disc" }
+      "style": { "fill": "#0B2A55", "stroke": "#60A5FA", "text": "#DBEAFE", "accent": "#93C5FD", "mark": "disc", "asset": "assets/badge-logos/white/white-bluray.svg" }
     },
     {
       "groupId": "quality",
@@ -45,7 +48,7 @@
       "name": "WebDL",
       "label": "WEB-DL",
       "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
-      "style": { "fill": "#0F2C3F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#22D3EE", "mark": "globe" }
+      "style": { "fill": "#0F2C3F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#22D3EE", "mark": "globe", "asset": "assets/badge-logos/white/white-webdl.svg" }
     },
     {
       "groupId": "resolution",
@@ -53,7 +56,7 @@
       "name": "4K",
       "label": "4K",
       "pattern": "(?i)\\b(?:2160p?|4k|uhd)\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none", "asset": "assets/badge-logos/white/white-4k.svg", "assetHeight": 10.2 }
     },
     {
       "groupId": "resolution",
@@ -61,7 +64,7 @@
       "name": "1080p",
       "label": "1080P",
       "pattern": "(?i)\\b1080p?\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none", "asset": "assets/badge-logos/white/white-1080p.svg", "assetHeight": 9.4 }
     },
     {
       "groupId": "resolution",
@@ -69,7 +72,7 @@
       "name": "720p",
       "label": "720P",
       "pattern": "(?i)\\b720p?\\b",
-      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none" }
+      "style": { "fill": "#FDE047", "stroke": "#FACC15", "text": "#151000", "accent": "#854D0E", "mark": "none", "asset": "assets/badge-logos/white/white-720p.svg", "assetHeight": 9.4 }
     },
     {
       "groupId": "visual",
@@ -77,7 +80,7 @@
       "name": "SeaDex",
       "label": "SEADEX",
       "pattern": "(?i)\\bseadex\\b",
-      "style": { "fill": "#10B981", "stroke": "#34D399", "text": "#022C22", "accent": "#ECFDF5", "mark": "none" }
+      "style": { "fill": "#10B981", "stroke": "#34D399", "text": "#022C22", "accent": "#ECFDF5", "mark": "none", "asset": "assets/badge-logos/white/white-SeaDex.svg" }
     },
     {
       "groupId": "visual",
@@ -85,7 +88,7 @@
       "name": "HDR10+",
       "label": "HDR10+",
       "pattern": "(?i)(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)",
-      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10Plus.svg" }
     },
     {
       "groupId": "visual",
@@ -93,7 +96,7 @@
       "name": "HDR10",
       "label": "HDR10",
       "pattern": "(?i)^(?!.*(?:\\bhdr10\\+(?=$|\\W)|\\bhdr10plus\\b|\\bhdr10 plus\\b)).*\\bhdr10\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR10.svg" }
     },
     {
       "groupId": "visual",
@@ -101,7 +104,7 @@
       "name": "HDR",
       "label": "HDR",
       "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt", "asset": "assets/badge-logos/white/white-HDR.svg" }
     },
     {
       "groupId": "visual",
@@ -109,7 +112,7 @@
       "name": "IMAX Enhanced",
       "label": "IMAX E",
       "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
-      "style": { "fill": "#0A0A0A", "stroke": "#E5E7EB", "text": "#FFFFFF", "accent": "#FACC15", "mark": "frame" }
+      "style": { "fill": "#0A0A0A", "stroke": "#E5E7EB", "text": "#FFFFFF", "accent": "#FACC15", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX-enhanced.svg" }
     },
     {
       "groupId": "visual",
@@ -117,15 +120,15 @@
       "name": "IMAX",
       "label": "IMAX",
       "pattern": "(?i)^(?!.*\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b).*\\bimax\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "frame" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX.svg" }
     },
     {
       "groupId": "visual",
       "id": "dv",
       "name": "DV",
       "label": "DV",
-      "pattern": "(?i)^(?!.*(?:\\b(?:atmos|dolby atmos|true[- .]?hd|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b|\\bdd\\+(?=$|\\W))).*\\b(?:dv|dovi|dolby vision)\\b",
-      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#111827", "mark": "dolby" }
+      "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#111827", "mark": "dolby", "asset": "assets/badge-logos/white/white-DV.svg" }
     },
     {
       "groupId": "audio",
@@ -133,7 +136,7 @@
       "name": "DTS:X",
       "label": "X",
       "pattern": "(?i)\\b(?:dts[:. -]?x)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts", "asset": "assets/badge-logos/white/white-dtsx.svg" }
     },
     {
       "groupId": "audio",
@@ -141,7 +144,7 @@
       "name": "DTS-HD MA",
       "label": "HD MA",
       "pattern": "(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts", "asset": "assets/badge-logos/white/white-dtshdma.svg" }
     },
     {
       "groupId": "audio",
@@ -149,7 +152,7 @@
       "name": "DTS-HD",
       "label": "HD",
       "pattern": "(?i)^(?!.*\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b).*\\bdts[- .]?hd\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts", "asset": "assets/badge-logos/white/white-dtshd.svg" }
     },
     {
       "groupId": "audio",
@@ -157,55 +160,31 @@
       "name": "DTS",
       "label": "",
       "pattern": "(?i)^(?!.*\\b(?:dts[:. -]?x|dts[- .]?hd)\\b).*\\bdts\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts" }
-    },
-    {
-      "groupId": "audio",
-      "id": "atmos-dv",
-      "name": "Atmos+DV",
-      "label": "ATMOS+DV",
-      "pattern": "(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dts", "asset": "assets/badge-logos/white/white-dts.svg" }
     },
     {
       "groupId": "audio",
       "id": "atmos",
       "name": "Atmos",
       "label": "ATMOS",
-      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*\\b(?:atmos|dolby atmos)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
-    },
-    {
-      "groupId": "audio",
-      "id": "truehd-dv",
-      "name": "TrueHD+DV",
-      "label": "TRUEHD+DV",
-      "pattern": "(?i)^(?!.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "pattern": "(?i)\\b(?:atmos|dolby atmos)\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby", "asset": "assets/badge-logos/white/white-Atmos.svg" }
     },
     {
       "groupId": "audio",
       "id": "truehd",
       "name": "TrueHD",
       "label": "TRUEHD",
-      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*\\btrue[- .]?hd\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "pattern": "(?i)\\btrue[- .]?hd\\b",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby", "asset": "assets/badge-logos/white/white-TrueHD.svg" }
     },
     {
       "groupId": "audio",
       "id": "ddplus",
       "name": "DD+",
       "label": "DD+",
-      "pattern": "(?i)^(?!.*\\b(?:dv|dovi|dolby vision)\\b).*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
-    },
-    {
-      "groupId": "audio",
-      "id": "ddplus-dv",
-      "name": "DD+DV",
-      "label": "DD+DV",
-      "pattern": "(?i)^(?!.*\\b(?:atmos|dolby atmos)\\b)(?=.*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b))(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "pattern": "(?i)(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b)",
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby", "asset": "assets/badge-logos/white/white-DDPLUS.svg" }
     },
     {
       "groupId": "audio",
@@ -213,7 +192,7 @@
       "name": "DD",
       "label": "DD",
       "pattern": "(?i)^(?!.*(?:\\bdd\\+(?=$|\\W)|\\bddp\\b|\\be[- .]?ac[- .]?3\\b|\\bdolby digital plus\\b)).*\\b(?:dd|ac[- .]?3|dolby digital)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby", "asset": "assets/badge-logos/white/white-DD.svg" }
     },
     {
       "groupId": "channels",
@@ -221,7 +200,7 @@
       "name": "7.1",
       "label": "7.1",
       "pattern": "(?i)\\b7[. ]1\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker", "asset": "assets/badge-logos/white/white-71.svg" }
     },
     {
       "groupId": "channels",
@@ -229,7 +208,7 @@
       "name": "5.1",
       "label": "5.1",
       "pattern": "(?i)\\b5[. ]1\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker", "asset": "assets/badge-logos/white/white-51.svg" }
     },
     {
       "groupId": "streaming",
@@ -237,7 +216,7 @@
       "name": "NETFLIX",
       "label": "NETFLIX",
       "pattern": "(?i)\\b(?:netflix|nf)\\b",
-      "style": { "fill": "#E50914", "stroke": "#FF2935", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+      "style": { "fill": "#E50914", "stroke": "#FF2935", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "wordmark": "NETFLIX", "wordmarkSize": 10.1, "wordmarkPadding": 1.1, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -245,7 +224,7 @@
       "name": "PRIME VIDEO",
       "label": "PRIME",
       "pattern": "(?i)\\b(?:prime video|amazon|amzn)\\b",
-      "style": { "fill": "#00A8E1", "stroke": "#38BDF8", "text": "#031926", "accent": "#031926", "mark": "none" }
+      "style": { "fill": "#00A8E1", "stroke": "#38BDF8", "text": "#031926", "accent": "#031926", "mark": "none", "wordmark": "PRIME", "wordmarkSize": 10.1, "wordmarkPadding": 1.1, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -253,7 +232,7 @@
       "name": "APPLE TV+",
       "label": "APPLE TV+",
       "pattern": "(?i)\\b(?:apple tv\\+?|atvp)\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#050505", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#050505", "mark": "none", "wordmark": "ATV+", "wordmarkSize": 10.7, "wordmarkPadding": 1.2, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -261,7 +240,7 @@
       "name": "DISNEY+",
       "label": "DISNEY+",
       "pattern": "(?i)\\b(?:disney\\+?|dsnp)\\b",
-      "style": { "fill": "#38BDF8", "stroke": "#7DD3FC", "text": "#06152A", "accent": "#06152A", "mark": "none" }
+      "style": { "fill": "#38BDF8", "stroke": "#7DD3FC", "text": "#06152A", "accent": "#06152A", "mark": "none", "wordmark": "D+", "wordmarkSize": 11.4, "wordmarkPadding": 1.4, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -269,7 +248,7 @@
       "name": "MAX",
       "label": "MAX",
       "pattern": "(?i)\\b(?:max|hbo max|hbom)\\b",
-      "style": { "fill": "#7C3AED", "stroke": "#A78BFA", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+      "style": { "fill": "#7C3AED", "stroke": "#A78BFA", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "wordmark": "MAX", "wordmarkSize": 11, "wordmarkPadding": 1.2, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -277,7 +256,7 @@
       "name": "HULU",
       "label": "HULU",
       "pattern": "(?i)\\bhulu\\b",
-      "style": { "fill": "#1CE783", "stroke": "#86EFAC", "text": "#042B16", "accent": "#042B16", "mark": "none" }
+      "style": { "fill": "#1CE783", "stroke": "#86EFAC", "text": "#042B16", "accent": "#042B16", "mark": "none", "wordmark": "HULU", "wordmarkSize": 10.7, "wordmarkPadding": 1.2, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -285,7 +264,7 @@
       "name": "PEACOCK",
       "label": "PEACOCK",
       "pattern": "(?i)\\bpeacock\\b",
-      "style": { "fill": "#FDBA74", "stroke": "#FED7AA", "text": "#2B1200", "accent": "#2B1200", "mark": "none" }
+      "style": { "fill": "#FDBA74", "stroke": "#FED7AA", "text": "#2B1200", "accent": "#2B1200", "mark": "none", "wordmark": "PCOCK", "wordmarkSize": 10.1, "wordmarkPadding": 1.1, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -293,7 +272,7 @@
       "name": "PARAMOUNT+",
       "label": "PARAMOUNT+",
       "pattern": "(?i)\\b(?:paramount\\+?|pmtp)\\b",
-      "style": { "fill": "#60A5FA", "stroke": "#93C5FD", "text": "#07172D", "accent": "#07172D", "mark": "none" }
+      "style": { "fill": "#60A5FA", "stroke": "#93C5FD", "text": "#07172D", "accent": "#07172D", "mark": "none", "wordmark": "P+", "wordmarkSize": 11.4, "wordmarkPadding": 1.4, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -301,7 +280,7 @@
       "name": "CRAVE",
       "label": "CRAVE",
       "pattern": "(?i)\\bcrave\\b",
-      "style": { "fill": "#22D3EE", "stroke": "#67E8F9", "text": "#06232A", "accent": "#06232A", "mark": "none" }
+      "style": { "fill": "#22D3EE", "stroke": "#67E8F9", "text": "#06232A", "accent": "#06232A", "mark": "none", "wordmark": "CRAVE", "wordmarkSize": 10.1, "wordmarkPadding": 1.1, "wordmarkMark": "play" }
     },
     {
       "groupId": "streaming",
@@ -309,7 +288,7 @@
       "name": "CRUNCHY ROLL",
       "label": "CRUNCHY",
       "pattern": "(?i)\\b(?:crunchyroll|crunchy roll|cr)\\b",
-      "style": { "fill": "#F97316", "stroke": "#FDBA74", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none" }
+      "style": { "fill": "#F97316", "stroke": "#FDBA74", "text": "#FFFFFF", "accent": "#FFFFFF", "mark": "none", "wordmark": "CR", "wordmarkSize": 11.4, "wordmarkPadding": 1.4, "wordmarkMark": "play" }
     }
   ]
 }
