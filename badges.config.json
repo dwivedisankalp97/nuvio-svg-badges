@@ -1,6 +1,6 @@
 {
-  "version": "v3",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v3",
+  "version": "v4",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v4",
   "groups": [
     { "id": "quality", "name": "Quality", "color": "#38BDF8" },
     { "id": "resolution", "name": "Resolution", "color": "#FDE047" },
@@ -16,7 +16,7 @@
       "name": "Remux",
       "label": "REMUX",
       "pattern": "(?i)\\b(?:remux|blu[- .]?ray remux)\\b",
-      "style": { "fill": "#052E4F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#7DD3FC", "mark": "diamond" }
+      "style": { "fill": "#052E4F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#7DD3FC", "mark": "remux" }
     },
     {
       "groupId": "quality",
@@ -32,7 +32,7 @@
       "name": "WebDL",
       "label": "WEB-DL",
       "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
-      "style": { "fill": "#0F2C3F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#22D3EE", "mark": "signal" }
+      "style": { "fill": "#0F2C3F", "stroke": "#38BDF8", "text": "#E0F2FE", "accent": "#22D3EE", "mark": "globe" }
     },
     {
       "groupId": "resolution",
@@ -64,7 +64,7 @@
       "name": "SeaDex",
       "label": "SEADEX",
       "pattern": "(?i)\\bseadex\\b",
-      "style": { "fill": "#10B981", "stroke": "#34D399", "text": "#022C22", "accent": "#ECFDF5", "mark": "star" }
+      "style": { "fill": "#10B981", "stroke": "#34D399", "text": "#022C22", "accent": "#ECFDF5", "mark": "none" }
     },
     {
       "groupId": "visual",
@@ -72,7 +72,7 @@
       "name": "HDR10+",
       "label": "HDR10+",
       "pattern": "(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -80,7 +80,7 @@
       "name": "HDR10",
       "label": "HDR10",
       "pattern": "(?i)\\bhdr10\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -88,7 +88,7 @@
       "name": "HDR",
       "label": "HDR",
       "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "spark" }
+      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -118,7 +118,7 @@
       "groupId": "audio",
       "id": "dtsx",
       "name": "DTS:X",
-      "label": "dts:X",
+      "label": "DTS:X",
       "pattern": "(?i)\\b(?:dts[:. -]?x)\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
@@ -126,7 +126,7 @@
       "groupId": "audio",
       "id": "dts-hd-ma",
       "name": "DTS-HD MA",
-      "label": "dts-HD MA",
+      "label": "DTS-HD MA",
       "pattern": "(?i)\\b(?:dts[- .]?hd[- .]?ma|dts[- .]?hd master audio)\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
@@ -134,7 +134,7 @@
       "groupId": "audio",
       "id": "dts-hd",
       "name": "DTS-HD",
-      "label": "dts-HD",
+      "label": "DTS-HD",
       "pattern": "(?i)\\bdts[- .]?hd\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
@@ -142,7 +142,7 @@
       "groupId": "audio",
       "id": "dts",
       "name": "DTS",
-      "label": "dts",
+      "label": "DTS",
       "pattern": "(?i)\\bdts\\b",
       "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
@@ -152,7 +152,7 @@
       "name": "Atmos+DV",
       "label": "ATMOS+DV",
       "pattern": "(?i)(?=.*\\b(?:atmos|dolby atmos)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
     {
       "groupId": "audio",
@@ -168,7 +168,7 @@
       "name": "TrueHD+DV",
       "label": "TRUEHD+DV",
       "pattern": "(?i)(?=.*\\btrue[- .]?hd\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
     {
       "groupId": "audio",
@@ -176,7 +176,7 @@
       "name": "TrueHD",
       "label": "TRUEHD",
       "pattern": "(?i)\\btrue[- .]?hd\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
     {
       "groupId": "audio",
@@ -192,7 +192,7 @@
       "name": "DD+DV",
       "label": "DD+DV",
       "pattern": "(?i)(?=.*\\b(?:dd\\+|ddp|e[- .]?ac[- .]?3|dolby digital plus)\\b)(?=.*\\b(?:dv|dovi|dolby vision)\\b)",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "dolby" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
     },
     {
       "groupId": "audio",
@@ -208,7 +208,7 @@
       "name": "7.1",
       "label": "7.1",
       "pattern": "(?i)\\b7[. ]1\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker" }
     },
     {
       "groupId": "channels",
@@ -216,7 +216,7 @@
       "name": "5.1",
       "label": "5.1",
       "pattern": "(?i)\\b5[. ]1\\b",
-      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "none" }
+      "style": { "fill": "#F8FAFC", "stroke": "#E5E7EB", "text": "#050505", "accent": "#0F172A", "mark": "speaker" }
     },
     {
       "groupId": "streaming",

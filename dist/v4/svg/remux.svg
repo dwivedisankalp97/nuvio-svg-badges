@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" role="img" aria-label="Remux">
+  <g><path d="M4.5 8l3.8-3.8h4.9L9.4 8l3.8 3.8H8.3z" fill="#E0F2FE"/></g>
+  <text x="41" y="12.35" fill="#000000" opacity=".36" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">REMUX</text>
+  <text x="41" y="11.25" fill="#FFFFFF" opacity=".16" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">REMUX</text>
+  <text x="41" y="11.8" fill="#E0F2FE" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">REMUX</text>
+</svg>

@@ -27,33 +27,53 @@ function ensureDirs() {
 }
 
 function widthFor(label, mark) {
-  return Math.max(34, Math.min(92, Math.round(label.length * 7.25 + 10)));
+  const markWidth = mark === 'none' ? 0 : 18;
+  return Math.max(34, Math.min(92, Math.round(label.length * 7.15 + 10 + markWidth)));
 }
 
 function fontSizeFor(label) {
-  if (label.length >= 10) return 9.2;
-  if (label.length >= 9) return 9.7;
-  if (label.length >= 8) return 10.1;
-  if (label.length <= 3) return 11.8;
-  return 10.8;
+  if (label.length >= 10) return 9.1;
+  if (label.length >= 9) return 9.5;
+  if (label.length >= 8) return 10;
+  if (label.length <= 3) return 11.6;
+  return 10.7;
+}
+
+function hexToRgb(hex) {
+  const value = hex.replace('#', '');
+  if (value.length !== 6) return { r: 255, g: 255, b: 255 };
+  return {
+    r: Number.parseInt(value.slice(0, 2), 16),
+    g: Number.parseInt(value.slice(2, 4), 16),
+    b: Number.parseInt(value.slice(4, 6), 16),
+  };
+}
+
+function luminance(hex) {
+  const { r, g, b } = hexToRgb(hex);
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 }
 
 function markSvg(mark, style) {
+  const fill = style.icon || style.text;
+  const cutout = style.fill;
   switch (mark) {
-    case 'diamond':
-      return `<path d="M12 4.5 L17.5 10 L12 15.5 L6.5 10 Z" fill="${style.accent}" opacity=".95"/>`;
+    case 'remux':
+      return `<path d="M4.5 8l3.8-3.8h4.9L9.4 8l3.8 3.8H8.3z" fill="${fill}"/>`;
     case 'disc':
-      return `<circle cx="12" cy="10" r="5.4" fill="none" stroke="${style.accent}" stroke-width="1.7"/><circle cx="12" cy="10" r="1.8" fill="${style.accent}"/>`;
-    case 'signal':
-      return `<path d="M6.5 13.8 h11 v2.7h-11zM9.3 9.6 h8.2v2.7H9.3zM12.1 5.4h5.4v2.7h-5.4z" fill="${style.accent}" opacity=".95"/>`;
-    case 'star':
-      return `<path d="M12 3.8l1.9 4 4.3.5-3.2 3 .8 4.3-3.8-2.1-3.8 2.1.8-4.3-3.2-3 4.3-.5z" fill="${style.accent}"/>`;
-    case 'spark':
-      return `<path d="M12 3.7 L13.8 8.5 L18.5 10 L13.8 11.5 L12 16.3 L10.2 11.5 L5.5 10 L10.2 8.5 Z" fill="${style.accent}" opacity=".92"/>`;
+      return `<circle cx="8.5" cy="8" r="5" fill="none" stroke="${fill}" stroke-width="1.8"/><circle cx="8.5" cy="8" r="1.4" fill="${fill}"/>`;
+    case 'globe':
+      return `<circle cx="8.5" cy="8" r="5" fill="none" stroke="${fill}" stroke-width="1.6"/><path d="M3.8 8h9.4M8.5 3.2c1.5 1.5 1.5 8.1 0 9.6M8.5 3.2c-1.5 1.5-1.5 8.1 0 9.6" fill="none" stroke="${fill}" stroke-width="1.05" stroke-linecap="round"/>`;
+    case 'bolt':
+      return `<path d="M9.5 2.8L4.6 8.7h3.3l-.9 4.5 5-6h-3.2z" fill="${fill}"/>`;
     case 'frame':
-      return `<path d="M6 6h12v8H6z" fill="none" stroke="${style.accent}" stroke-width="1.7"/><path d="M8.5 8.5h7v3H8.5z" fill="${style.accent}" opacity=".55"/>`;
+      return `<path d="M3.8 4.7h9.4v6.6H3.8z" fill="none" stroke="${fill}" stroke-width="1.5"/><path d="M5.8 6.9h5.4v2.2H5.8z" fill="${fill}" opacity=".65"/>`;
     case 'dolby':
-      return `<path d="M6 5h5.4c3 0 5.4 2.2 5.4 5s-2.4 5-5.4 5H6z" fill="${style.accent}"/><path d="M9.4 6.3v7.4c1.9-.4 3.4-2 3.4-3.7S11.3 6.7 9.4 6.3z" fill="${style.fill}"/><path d="M18.3 5h2.7v10h-2.7z" fill="${style.accent}"/>`;
+      return `<path d="M3.6 4.1h5.1c2.4 0 4.1 1.7 4.1 3.9s-1.7 3.9-4.1 3.9H3.6z" fill="${fill}"/><path d="M6.7 5.4v5.2c1.2-.4 2.1-1.3 2.1-2.6S7.9 5.8 6.7 5.4z" fill="${cutout}"/>`;
+    case 'dts':
+      return `<path d="M3.9 5.1c2.5-1.3 6.6-1.3 9.1 0M3.9 7.1c2.5-1.2 6.6-1.2 9.1 0M3.9 9.1c2.5-1.2 6.6-1.2 9.1 0M3.9 11.1c2.5-1.2 6.6-1.2 9.1 0" fill="none" stroke="${fill}" stroke-width="1.2" stroke-linecap="round"/>`;
+    case 'speaker':
+      return `<path d="M3.5 9.8h2.4l3.2 2.8V3.4L5.9 6.2H3.5z" fill="${fill}"/><path d="M10.6 5.3c1.2 1.4 1.2 4 0 5.4M12.4 3.9c2 2.4 2 5.8 0 8.2" fill="none" stroke="${fill}" stroke-width="1.25" stroke-linecap="round"/>`;
     default:
       return '';
   }
@@ -61,15 +81,31 @@ function markSvg(mark, style) {
 
 function svgFor(badge) {
   const style = badge.style;
-  const mark = 'none';
+  const mark = style.mark || 'none';
   const width = widthFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
-  const textX = width / 2;
+  const hasMark = mark !== 'none';
+  const textX = hasMark ? (width + 18) / 2 : width / 2;
   const label = esc(badge.label);
+  const darkText = luminance(style.text) < 0.45;
+  const shadowColor = darkText ? '#FFFFFF' : '#000000';
+  const shadowOpacity = darkText ? '.24' : '.36';
+  const shadowY = darkText ? '11.35' : '12.35';
+  const highlightColor = darkText ? '#000000' : '#FFFFFF';
+  const highlightOpacity = darkText ? '.12' : '.16';
+  const highlightY = darkText ? '12.3' : '11.25';
+  const letterSpacing = badge.label.length <= 3 ? '.25' : badge.label.length >= 9 ? '.1' : '.18';
+  const fontWeight = badge.label.length >= 9 ? 760 : 820;
+  const textStyle = `font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="${fontWeight}" letter-spacing="${letterSpacing}"`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${BADGE_HEIGHT}" viewBox="0 0 ${width} ${BADGE_HEIGHT}" role="img" aria-label="${esc(badge.name)}">
+  ${hasMark ? `<g>${markSvg(mark, style)}</g>` : ''}
+  <text x="${textX}" y="${shadowY}" fill="${shadowColor}" opacity="${shadowOpacity}" text-anchor="middle"
+    ${textStyle}>${label}</text>
+  <text x="${textX}" y="${highlightY}" fill="${highlightColor}" opacity="${highlightOpacity}" text-anchor="middle"
+    ${textStyle}>${label}</text>
   <text x="${textX}" y="11.8" fill="${style.text}" text-anchor="middle"
-    font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="900">${label}</text>
+    ${textStyle}>${label}</text>
 </svg>
 `;
 }

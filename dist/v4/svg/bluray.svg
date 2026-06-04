@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="16" viewBox="0 0 71 16" role="img" aria-label="BluRay">
+  <g><circle cx="8.5" cy="8" r="5" fill="none" stroke="#DBEAFE" stroke-width="1.8"/><circle cx="8.5" cy="8" r="1.4" fill="#DBEAFE"/></g>
+  <text x="44.5" y="12.35" fill="#000000" opacity=".36" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">BLURAY</text>
+  <text x="44.5" y="11.25" fill="#FFFFFF" opacity=".16" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">BLURAY</text>
+  <text x="44.5" y="11.8" fill="#DBEAFE" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">BLURAY</text>
+</svg>

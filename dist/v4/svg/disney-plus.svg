@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="16" viewBox="0 0 60 16" role="img" aria-label="DISNEY+">
+  
+  <text x="30" y="11.35" fill="#FFFFFF" opacity=".24" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">DISNEY+</text>
+  <text x="30" y="12.3" fill="#000000" opacity=".12" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">DISNEY+</text>
+  <text x="30" y="11.8" fill="#06152A" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing=".18">DISNEY+</text>
+</svg>
