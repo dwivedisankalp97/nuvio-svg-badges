@@ -40,7 +40,7 @@
       "name": "BluRay",
       "label": "BLURAY",
       "pattern": "(?i)^(?!.*\\b(?:remux|blu[- .]?ray remux)\\b).*\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
-      "style": { "fill": "#2563EB", "stroke": "#93C5FD", "text": "#EFF6FF", "accent": "#EFF6FF", "icon": "#EFF6FF", "mark": "disc", "asset": "assets/badge-logos/white/white-bluray.svg" }
+      "style": { "fill": "#0284C7", "stroke": "#7DD3FC", "text": "#F0F9FF", "accent": "#F0F9FF", "icon": "#F0F9FF", "mark": "disc", "asset": "assets/badge-logos/white/white-bluray.svg" }
     },
     {
       "groupId": "quality",
@@ -48,7 +48,7 @@
       "name": "WebDL",
       "label": "WEB-DL",
       "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
-      "style": { "fill": "#0891B2", "stroke": "#67E8F9", "text": "#ECFEFF", "accent": "#ECFEFF", "icon": "#ECFEFF", "mark": "globe", "asset": "assets/badge-logos/white/white-webdl.svg" }
+      "style": { "fill": "#0284C7", "stroke": "#7DD3FC", "text": "#F0F9FF", "accent": "#F0F9FF", "icon": "#F0F9FF", "mark": "globe", "asset": "assets/badge-logos/white/white-webdl.svg" }
     },
     {
       "groupId": "resolution",

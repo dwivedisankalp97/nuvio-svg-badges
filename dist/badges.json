@@ -20,10 +20,10 @@
       "pattern": "(?i)^(?!.*\\b(?:remux|blu[- .]?ray remux)\\b).*\\b(?:blu[- .]?ray|b[dr]rip|bdremux|bd25|bd50|bd66|bd100)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14/svg/bluray.svg",
       "isEnabled": true,
-      "tagColor": "#2563EB",
+      "tagColor": "#0284C7",
       "tagStyle": "filled",
-      "textColor": "#EFF6FF",
-      "borderColor": "#93C5FD",
+      "textColor": "#F0F9FF",
+      "borderColor": "#7DD3FC",
       "type": "filter"
     },
     {
@@ -33,10 +33,10 @@
       "pattern": "(?i)\\b(?:web[- .]?dl|webdl|web[- .]?rip|webrip|web)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14/svg/webdl.svg",
       "isEnabled": true,
-      "tagColor": "#0891B2",
+      "tagColor": "#0284C7",
       "tagStyle": "filled",
-      "textColor": "#ECFEFF",
-      "borderColor": "#67E8F9",
+      "textColor": "#F0F9FF",
+      "borderColor": "#7DD3FC",
       "type": "filter"
     },
     {

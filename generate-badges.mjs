@@ -217,14 +217,8 @@ function readAsset(asset, style) {
     .replace(/<!--[\s\S]*?-->\s*/g, '')
     .replace(/^<svg\b[^>]*>/, '')
     .replace(/<\/svg>\s*$/, '')
-    .replace(
-      /fill="#(?:FFFFFF|FEFEFE|FFFFFE|FFFEFE|FEFFFE|FEFFFF|FFFEFF)"/gi,
-      `fill="${color}"`
-    )
-    .replace(
-      /stroke="#(?:FFFFFF|FEFEFE|FFFFFE|FFFEFE|FEFFFE|FEFFFF|FFFEFF)"/gi,
-      `stroke="${color}"`
-    )
+    .replace(/fill="#(?:F[EF]){3}"/gi, `fill="${color}"`)
+    .replace(/stroke="#(?:F[EF]){3}"/gi, `stroke="${color}"`)
     .trim();
 
   return { width, height, content };
