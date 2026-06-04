@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" role="img" aria-label="HDR10+">
+  <g><path d="M9.5 2.8L4.6 8.7h3.3l-.9 4.5 5-6h-3.2z" fill="#160A00"/></g>
+  <text x="39" y="11.35" fill="#FFFFFF" opacity=".24" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">HDR10+</text>
+  <text x="39" y="12.3" fill="#000000" opacity=".12" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">HDR10+</text>
+  <text x="39" y="11.8" fill="#160A00" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">HDR10+</text>
+</svg>

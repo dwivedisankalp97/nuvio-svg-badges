@@ -27,8 +27,8 @@ function ensureDirs() {
 }
 
 function widthFor(label, mark) {
-  const markWidth = mark === 'none' ? 0 : 18;
-  return Math.max(34, Math.min(92, Math.round(label.length * 7.15 + 10 + markWidth)));
+  const markWidth = mark === 'none' ? 0 : 14;
+  return Math.max(34, Math.min(92, Math.round(label.length * 6.9 + 9 + markWidth)));
 }
 
 function fontSizeFor(label) {
@@ -85,7 +85,7 @@ function svgFor(badge) {
   const width = widthFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
   const hasMark = mark !== 'none';
-  const textX = hasMark ? (width + 18) / 2 : width / 2;
+  const textX = hasMark ? (width + 14) / 2 : width / 2;
   const label = esc(badge.label);
   const darkText = luminance(style.text) < 0.45;
   const shadowColor = darkText ? '#FFFFFF' : '#000000';
@@ -94,7 +94,7 @@ function svgFor(badge) {
   const highlightColor = darkText ? '#000000' : '#FFFFFF';
   const highlightOpacity = darkText ? '.12' : '.16';
   const highlightY = darkText ? '12.3' : '11.25';
-  const letterSpacing = badge.label.length <= 3 ? '.25' : badge.label.length >= 9 ? '.1' : '.18';
+  const letterSpacing = '0';
   const fontWeight = badge.label.length >= 9 ? 760 : 820;
   const textStyle = `font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="${fontWeight}" letter-spacing="${letterSpacing}"`;
 

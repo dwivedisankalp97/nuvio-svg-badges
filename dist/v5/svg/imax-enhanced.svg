@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" role="img" aria-label="IMAX Enhanced">
+  <g><path d="M3.8 4.7h9.4v6.6H3.8z" fill="none" stroke="#FFFFFF" stroke-width="1.5"/><path d="M5.8 6.9h5.4v2.2H5.8z" fill="#FFFFFF" opacity=".65"/></g>
+  <text x="39" y="12.35" fill="#000000" opacity=".36" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">IMAX E</text>
+  <text x="39" y="11.25" fill="#FFFFFF" opacity=".16" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">IMAX E</text>
+  <text x="39" y="11.8" fill="#FFFFFF" text-anchor="middle"
+    font-family="sans-serif-condensed, Arial, Helvetica, sans-serif" font-size="10.7" font-weight="820" letter-spacing="0">IMAX E</text>
+</svg>

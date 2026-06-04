@@ -1,10 +1,10 @@
 {
-  "version": "v4",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v4",
+  "version": "v5",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v5",
   "groups": [
     { "id": "quality", "name": "Quality", "color": "#38BDF8" },
     { "id": "resolution", "name": "Resolution", "color": "#FDE047" },
-    { "id": "visual", "name": "Visual", "color": "#FACC15" },
+    { "id": "visual", "name": "Visual", "color": "#F59E0B" },
     { "id": "audio", "name": "Audio", "color": "#F8FAFC" },
     { "id": "channels", "name": "Channels", "color": "#F8FAFC" },
     { "id": "streaming", "name": "Streaming", "color": "#F87171" }
@@ -72,7 +72,7 @@
       "name": "HDR10+",
       "label": "HDR10+",
       "pattern": "(?i)\\b(?:hdr10\\+|hdr10plus|hdr10 plus)\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -80,7 +80,7 @@
       "name": "HDR10",
       "label": "HDR10",
       "pattern": "(?i)\\bhdr10\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -88,7 +88,7 @@
       "name": "HDR",
       "label": "HDR",
       "pattern": "(?i)\\b(?:hdr|high dynamic range)\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "bolt" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "bolt" }
     },
     {
       "groupId": "visual",
@@ -104,7 +104,7 @@
       "name": "IMAX",
       "label": "IMAX",
       "pattern": "(?i)\\bimax\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#713F12", "mark": "frame" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#3A1A00", "mark": "frame" }
     },
     {
       "groupId": "visual",
@@ -112,7 +112,7 @@
       "name": "DV",
       "label": "DV",
       "pattern": "(?i)\\b(?:dv|dovi|dolby vision)\\b",
-      "style": { "fill": "#FACC15", "stroke": "#FDE68A", "text": "#171000", "accent": "#111827", "mark": "dolby" }
+      "style": { "fill": "#F59E0B", "stroke": "#FBBF24", "text": "#160A00", "accent": "#111827", "mark": "dolby" }
     },
     {
       "groupId": "audio",
