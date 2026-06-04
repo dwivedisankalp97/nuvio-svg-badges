@@ -1,6 +1,13 @@
 {
-  "version": "v7",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v7",
+  "version": "v8",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v8",
+  "theme": {
+    "name": "monochrome-outline",
+    "fill": "#171717",
+    "stroke": "#F4F4F5",
+    "text": "#FFFFFF",
+    "accent": "#FFFFFF"
+  },
   "font": {
     "renderer": "path",
     "path": "assets/fonts/RobotoCondensed.ttf",

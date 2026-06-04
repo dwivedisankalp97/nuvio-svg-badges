@@ -92,6 +92,18 @@ function luminance(hex) {
   return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 }
 
+function styleFor(badge) {
+  if (config.theme?.name !== 'monochrome-outline') return badge.style;
+  return {
+    ...badge.style,
+    fill: config.theme.fill || '#171717',
+    stroke: config.theme.stroke || '#F4F4F5',
+    text: config.theme.text || '#FFFFFF',
+    accent: config.theme.accent || config.theme.text || '#FFFFFF',
+    icon: config.theme.icon || config.theme.text || '#FFFFFF',
+  };
+}
+
 function markSvg(mark, style) {
   const fill = style.icon || style.text;
   const cutout = style.fill;
@@ -188,7 +200,7 @@ function labelTexts(label, x, fontSize, style, darkText) {
 }
 
 function svgFor(badge) {
-  const style = badge.style;
+  const style = styleFor(badge);
   const mark = style.mark || 'none';
   const { width, textX } = layoutFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
@@ -216,6 +228,7 @@ function build() {
   }));
 
   const filters = config.badges.map((badge) => {
+    const style = styleFor(badge);
     const filename = `${badge.id}.svg`;
     fs.writeFileSync(path.join(SVG_DIR, filename), svgFor(badge));
     return {
@@ -225,10 +238,10 @@ function build() {
       pattern: badge.pattern,
       imageURL: `${BASE_URL}/svg/${filename}`,
       isEnabled: true,
-      tagColor: badge.style.fill,
+      tagColor: style.fill,
       tagStyle: 'filled',
-      textColor: badge.style.text,
-      borderColor: badge.style.stroke,
+      textColor: style.text,
+      borderColor: style.stroke,
       type: 'filter',
     };
   });
