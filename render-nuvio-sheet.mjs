@@ -21,6 +21,9 @@ const scale = 4;
 const padding = 32;
 const chipH = 20;
 const imgH = 16;
+const minImgW = 34;
+const maxImgW = 92;
+const chipPadX = 3;
 const gap = 8;
 const rowGap = 10;
 const sectionGap = 24;
@@ -51,6 +54,10 @@ function inlineSvg(svg) {
     .trim();
 }
 
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
 const parts = [
   `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="1" viewBox="0 0 ${width} 1">`,
   '<rect width="100%" height="100%" fill="#050505"/>',
@@ -71,7 +78,8 @@ for (const group of groups) {
     const svgPath = path.join(root, 'svg', `${filter.id}.svg`);
     const svg = fs.readFileSync(svgPath, 'utf8');
     const size = svgSize(svg);
-    const chipW = size.width + 8;
+    const imageW = clamp(size.width, minImgW, maxImgW);
+    const chipW = imageW + chipPadX * 2;
     if (x + chipW > width - padding) {
       x = padding;
       y += chipH + rowGap;
@@ -81,7 +89,7 @@ for (const group of groups) {
       `<rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="5" fill="${filter.tagColor}" stroke="${filter.borderColor}" stroke-width="1"/>`
     );
     parts.push(
-      `<g transform="translate(${x + 4} ${y + (chipH - imgH) / 2})">${inlineSvg(svg)}</g>`
+      `<g transform="translate(${x + chipPadX + (imageW - size.width) / 2} ${y + (chipH - imgH) / 2})">${inlineSvg(svg)}</g>`
     );
     x += chipW + gap;
   }

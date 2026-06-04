@@ -4,10 +4,10 @@ SVG stream badge pack and generator for Nuvio.
 
 ## Import URLs
 
-Current final filled version:
+Current larger filled version:
 
 ```text
-https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/badges.json
+https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v16/badges.json
 ```
 
 Previous finalized versions:
@@ -21,6 +21,9 @@ https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/m
 
 # Filled color, original palette
 https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14/badges.json
+
+# Filled color
+https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/badges.json
 ```
 
 ## Generate Your Own Pack
