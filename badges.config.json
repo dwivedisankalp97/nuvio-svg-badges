@@ -80,7 +80,7 @@
       "name": "SeaDex",
       "label": "SEADEX",
       "pattern": "(?i)\\bseadex\\b",
-      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "none", "asset": "assets/badge-logos/white/white-SeaDex.svg" }
+      "style": { "fill": "#10B981", "stroke": "#6EE7B7", "text": "#022C22", "accent": "#022C22", "icon": "#022C22", "mark": "none", "asset": "assets/badge-logos/white/white-SeaDex.svg" }
     },
     {
       "groupId": "visual",
@@ -112,7 +112,7 @@
       "name": "IMAX Enhanced",
       "label": "IMAX E",
       "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
-      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX-enhanced.svg" }
+      "style": { "fill": "#1D4ED8", "stroke": "#93C5FD", "text": "#EFF6FF", "accent": "#EFF6FF", "icon": "#EFF6FF", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX-enhanced.svg" }
     },
     {
       "groupId": "visual",
@@ -120,7 +120,7 @@
       "name": "IMAX",
       "label": "IMAX",
       "pattern": "(?i)^(?!.*\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b).*\\bimax\\b",
-      "style": { "fill": "#E11D48", "stroke": "#FDA4AF", "text": "#FFF1F2", "accent": "#FFF1F2", "icon": "#FFF1F2", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX.svg" }
+      "style": { "fill": "#1D4ED8", "stroke": "#93C5FD", "text": "#EFF6FF", "accent": "#EFF6FF", "icon": "#EFF6FF", "mark": "frame", "asset": "assets/badge-logos/white/white-IMAX.svg" }
     },
     {
       "groupId": "visual",

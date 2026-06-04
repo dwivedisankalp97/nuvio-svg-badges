@@ -85,10 +85,10 @@
       "pattern": "(?i)\\bseadex\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/svg/seadex.svg",
       "isEnabled": true,
-      "tagColor": "#E11D48",
+      "tagColor": "#10B981",
       "tagStyle": "filled",
-      "textColor": "#FFF1F2",
-      "borderColor": "#FDA4AF",
+      "textColor": "#022C22",
+      "borderColor": "#6EE7B7",
       "type": "filter"
     },
     {
@@ -137,10 +137,10 @@
       "pattern": "(?i)\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/svg/imax-enhanced.svg",
       "isEnabled": true,
-      "tagColor": "#E11D48",
+      "tagColor": "#1D4ED8",
       "tagStyle": "filled",
-      "textColor": "#FFF1F2",
-      "borderColor": "#FDA4AF",
+      "textColor": "#EFF6FF",
+      "borderColor": "#93C5FD",
       "type": "filter"
     },
     {
@@ -150,10 +150,10 @@
       "pattern": "(?i)^(?!.*\\b(?:imax enhanced|imax.enhanced|imax-enhanced)\\b).*\\bimax\\b",
       "imageURL": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/svg/imax.svg",
       "isEnabled": true,
-      "tagColor": "#E11D48",
+      "tagColor": "#1D4ED8",
       "tagStyle": "filled",
-      "textColor": "#FFF1F2",
-      "borderColor": "#FDA4AF",
+      "textColor": "#EFF6FF",
+      "borderColor": "#93C5FD",
       "type": "filter"
     },
     {
