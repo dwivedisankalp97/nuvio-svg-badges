@@ -1,6 +1,6 @@
 {
-  "version": "v6",
-  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v6",
+  "version": "v7",
+  "baseUrl": "https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v7",
   "font": {
     "renderer": "path",
     "path": "assets/fonts/RobotoCondensed.ttf",

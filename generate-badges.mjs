@@ -30,8 +30,41 @@ function ensureDirs() {
 }
 
 function widthFor(label, mark) {
+  if (textRenderer) {
+    const fontSize = fontSizeFor(label);
+    const metrics = textRenderer.getMetrics(label, {
+      fontSize,
+      kerning: true,
+      anchor: 'left baseline',
+    });
+    const textWidth = Math.ceil(metrics.width + 1);
+    if (mark === 'none') {
+      return Math.max(28, Math.min(84, textWidth + 8));
+    }
+    return Math.max(37, Math.min(84, textWidth + 19));
+  }
+
   const markWidth = mark === 'none' ? 0 : 14;
   return Math.max(34, Math.min(92, Math.round(label.length * 6.9 + 9 + markWidth)));
+}
+
+function layoutFor(label, mark) {
+  const width = widthFor(label, mark);
+  if (!textRenderer || mark === 'none') {
+    return { width, textX: mark === 'none' ? width / 2 : (width + 14) / 2 };
+  }
+
+  const fontSize = fontSizeFor(label);
+  const metrics = textRenderer.getMetrics(label, {
+    fontSize,
+    kerning: true,
+    anchor: 'left baseline',
+  });
+  const textWidth = Math.ceil(metrics.width + 1);
+  return {
+    width,
+    textX: 15.2 + textWidth / 2,
+  };
 }
 
 function fontSizeFor(label) {
@@ -157,10 +190,9 @@ function labelTexts(label, x, fontSize, style, darkText) {
 function svgFor(badge) {
   const style = badge.style;
   const mark = style.mark || 'none';
-  const width = widthFor(badge.label, mark);
+  const { width, textX } = layoutFor(badge.label, mark);
   const fontSize = fontSizeFor(badge.label);
   const hasMark = mark !== 'none';
-  const textX = hasMark ? (width + 14) / 2 : width / 2;
   const darkText = luminance(style.text) < 0.45;
   const labelSvg = textRenderer
     ? labelPaths(badge.label, textX, 11.7, fontSize, style, darkText)
