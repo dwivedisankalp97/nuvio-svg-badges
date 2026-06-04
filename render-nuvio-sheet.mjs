@@ -3,7 +3,11 @@ import path from 'node:path';
 import sharp from 'sharp';
 
 const repo = process.argv[2] || process.cwd();
-const version = process.argv[3] || 'v13';
+const configPath = path.join(repo, 'badges.config.json');
+const config = fs.existsSync(configPath)
+  ? JSON.parse(fs.readFileSync(configPath, 'utf8'))
+  : {};
+const version = process.argv[3] || config.version || 'v1';
 const out =
   process.argv[4] || path.join(repo, 'dist', version, 'nuvio-tv-sim-4x.png');
 const root = path.join(repo, 'dist', version);

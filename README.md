@@ -1,56 +1,101 @@
 # Nuvio SVG Badges
 
-SVG stream badge pack for Nuvio.
+SVG stream badge pack and generator for Nuvio.
 
-Import URL:
+## Import URLs
+
+Current final filled version:
 
 ```text
 https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v15/badges.json
 ```
 
-The pack is generated from `badges.config.json` and `generate-badges.mjs` so
-badge names, regex patterns, colors, and SVG assets stay consistent. The v15 URL
-is intentionally versioned so Nuvio/Coil can fetch fresh badge images instead of
-reusing an older cached URL.
-
-Final minimalist version:
+Previous finalized versions:
 
 ```text
+# Minimalist
 https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v12/badges.json
-```
 
-Final light-color version:
-
-```text
+# Light color
 https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v13/badges.json
+
+# Filled color, original palette
+https://raw.githubusercontent.com/dwivedisankalp97/nuvio-svg-badges/refs/heads/main/dist/v14/badges.json
 ```
 
-The SVGs are transparent text/icon layers. Nuvio draws the bordered chip, which
-keeps imported badges visually aligned with built-in stream badges. The v10 SVGs
-render label text as Roboto Condensed vector paths, so display is not
-dependent on the client device's font fallback.
+## Generate Your Own Pack
 
-Commands:
+Fork this repo, edit `badges.config.json`, then run:
 
 ```bash
 npm install
-node generate-badges.mjs
-npm run render -- . v15
+npm run generate
+npm run render
 ```
 
-The generated preview files are:
+`npm run generate` writes:
 
 ```text
-dist/v15/preview.html
-dist/v15/nuvio-tv-sim-4x.png
+dist/<version>/badges.json
+dist/<version>/svg/*.svg
 dist/preview.html
 ```
 
-Use the rendered `nuvio-tv-sim-4x.png` sheet for visual checks. The HTML preview
-only shows raw imported images and does not match Nuvio's chip rendering closely.
+`npm run render` writes a Nuvio-style visual check:
 
-If this repo is published under a different owner/name, regenerate with:
-
-```bash
-BADGE_BASE_URL="https://raw.githubusercontent.com/<owner>/<repo>/refs/heads/main/dist/v15" node generate-badges.mjs
+```text
+dist/<version>/nuvio-tv-sim-4x.png
 ```
+
+Use the rendered PNG for visual checks. The HTML preview only shows raw imported
+images and does not match Nuvio's chip rendering closely.
+
+## Publish
+
+Set these fields in `badges.config.json` before generating:
+
+```json
+{
+  "version": "v1",
+  "baseUrl": "https://raw.githubusercontent.com/<owner>/<repo>/refs/heads/main/dist/v1"
+}
+```
+
+Commit and push the generated `dist/<version>` folder. Import this URL in Nuvio:
+
+```text
+https://raw.githubusercontent.com/<owner>/<repo>/refs/heads/main/dist/<version>/badges.json
+```
+
+Use a new version folder whenever you want to bypass Nuvio/Coil image caching.
+
+## Configuration
+
+`badges.config.json` is the source of truth.
+
+Important top-level fields:
+
+- `version`: output folder under `dist/`.
+- `baseUrl`: public URL prefix used in generated `imageURL` fields.
+- `theme.tagStyle`: Nuvio chip style, usually `filled` or `bordered`.
+- `theme.assetHeight`: default SVG logo height inside the chip.
+- `font.path`: font used when generated text paths are needed.
+- `groups`: sections shown in Nuvio's import preview.
+- `badges`: filter rules and SVG styles.
+
+Each badge has:
+
+- `groupId`: must match a group `id`.
+- `id`: output filename and stable badge identifier.
+- `name`: label shown in the Nuvio import UI.
+- `pattern`: regex used by Nuvio to match streams.
+- `style.fill`: chip background color.
+- `style.stroke`: chip border color.
+- `style.text`: text/icon color.
+- `style.asset`: SVG asset to render inside the chip.
+- `style.assetHeight`: optional per-badge size override.
+
+The generator recolors near-white fills/strokes in SVG assets to `style.icon` or
+`style.text`, so white source SVGs can be reused across palettes.
+
+More detailed setup notes are in [SETUP.md](SETUP.md).
